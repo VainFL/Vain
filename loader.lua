@@ -40,7 +40,7 @@ end
 
 local latest_commit
 local success, response = pcall(function()
-    return game:HttpGet('https://api.github.com/repos/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY/commits/main')
+    return game:HttpGet('https://api.github.com/repos/VainFL/Vain/commits/main')
 end)
 
 if success then
