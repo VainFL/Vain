@@ -19,7 +19,11 @@ local Converted = {
 	["_UICorner1"] = Instance.new("UICorner");
 	["_Toggle"] = Instance.new("TextButton");
 	["_UICorner2"] = Instance.new("UICorner");
+	["_StarESP"] = Instance.new("Frame");
 	["_UICorner3"] = Instance.new("UICorner");
+	["_Toggle1"] = Instance.new("TextButton");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_UICorner5"] = Instance.new("UICorner");
 }
 
 -- Properties:
@@ -28,6 +32,7 @@ Converted["_VainUI"].ResetOnSpawn = false
 Converted["_VainUI"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_VainUI"].Name = "VainUI"
 Converted["_VainUI"].Parent = game:GetService("CoreGui")
+Converted["_VainUI"].Enabled = false
 
 Converted["_Main"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Main"].BackgroundTransparency = 1
@@ -103,43 +108,66 @@ Converted["_Main1"].Size = UDim2.new(0.87843138, 0, 0.961130738, 0)
 Converted["_Main1"].Name = "Main"
 Converted["_Main1"].Parent = Converted["_Visuals1"]
 
+Converted["_UIListLayout1"].Padding = UDim.new(0, 5)
 Converted["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
 Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout1"].Parent = Converted["_Main1"]
 
-Converted["_MetalESP"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
-Converted["_MetalESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_MetalESP"].BorderSizePixel = 0
 Converted["_MetalESP"].Size = UDim2.new(0.899999976, 0, 0.0500000007, 0)
 Converted["_MetalESP"].Name = "MetalESP"
-Converted["_MetalESP"].Transparency = 1
 Converted["_MetalESP"].Parent = Converted["_Main1"]
+Converted["_MetalESP"].BackgroundTransparency = 1
 
 Converted["_UICorner1"].Parent = Converted["_MetalESP"]
 
-Converted["_Toggle"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
 Converted["_Toggle"].Font = Enum.Font.Arial
 Converted["_Toggle"].Text = "Metal ESP"
-Converted["_Toggle"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
 Converted["_Toggle"].TextSize = 14
-Converted["_Toggle"].BackgroundTransparency = 1
+Converted["_Toggle"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle"].BackgroundTransparency = 0
 Converted["_Toggle"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Toggle"].BorderSizePixel = 0
 Converted["_Toggle"].Size = UDim2.new(1, 0, 1, 0)
 Converted["_Toggle"].Name = "Toggle"
-Converted["_Toggle"].Transparency = 0
 Converted["_Toggle"].Parent = Converted["_MetalESP"]
-
 
 Converted["_UICorner2"].Parent = Converted["_Toggle"]
 
-Converted["_UICorner3"].Parent = Converted["_Visuals1"]
+Converted["_StarESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_StarESP"].BorderSizePixel = 0
+Converted["_StarESP"].Size = UDim2.new(0.899999976, 0, 0.0500000007, 0)
+Converted["_StarESP"].Name = "StarESP"
+Converted["_StarESP"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_StarESP"].BackgroundTransparency = 1
+Converted["_StarESP"].Parent = Converted["_Main1"]
+
+Converted["_UICorner3"].Parent = Converted["_StarESP"]
+
+Converted["_Toggle1"].Font = Enum.Font.Arial
+Converted["_Toggle1"].Text = "Star ESP"
+Converted["_Toggle1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle1"].TextSize = 14
+Converted["_Toggle1"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_Toggle1"].BackgroundTransparency = 0
+Converted["_Toggle1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle1"].BorderSizePixel = 0
+Converted["_Toggle1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Toggle1"].Name = "Toggle"
+Converted["_Toggle1"].Parent = Converted["_StarESP"]
+
+Converted["_UICorner4"].Parent = Converted["_Toggle1"]
+
+Converted["_UICorner5"].Parent = Converted["_Visuals1"]
+
 
 
 -- VARIABLES --
 
 local CollectionService = game:GetService("CollectionService")
 local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
 local Players = game:GetService("Players")
 local Workspace = game.Workspace
 
@@ -154,6 +182,8 @@ local Modules = Main:WaitForChild("Modules")
 local ModuleVisuals = Modules:WaitForChild("Visuals")
 local MetalESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("MetalESP")
 local MetalESPToggleButton = MetalESPFrame:WaitForChild("Toggle")
+local StarESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("StarESP")
+local StarESPToggleButton = StarESPFrame:WaitForChild("Toggle")
 
 local ModuleList = Main:WaitForChild("ModuleList")
 local Container = ModuleList:WaitForChild("Container")
@@ -164,6 +194,7 @@ local VisualsButton = ModuleListVisuals:WaitForChild("VisualsButton")
 
 Settings = {
 	metal_esp_toggled = false,
+	star_esp_toggled = false,
 	
 }
 
@@ -179,7 +210,23 @@ local function toggleMetalESP()
 	end
 end
 
-local function createBeam(target, highlight, beamType)
+local function toggleStarESP()
+	if Settings.star_esp_toggled == true then
+		Settings.star_esp_toggled = false
+	else
+		Settings.star_esp_toggled = true
+	end
+end
+
+local function toggleBeamType(beamType, visibility)
+	if Beams[beamType] then
+		for i, v in ipairs(Beams[beamType]) do
+			v.Enabled = visibility
+		end
+	end
+end
+
+local function createBeam(target, highlight, beamType, color, visibility)
 	
 	if not (target.PrimaryPart and player.Character and player.Character.PrimaryPart) then
 		return
@@ -192,11 +239,21 @@ local function createBeam(target, highlight, beamType)
 	attachmentPlayer.Parent = player.Character.PrimaryPart
 	
 	-- 
-	local beam = Instance.new("Beam")
+	local beam = Instance.new("Beam", target)
 	beam.Attachment1 = attachmentLoot
 	beam.Attachment0 = attachmentPlayer
 	beam.Parent = target.PrimaryPart
-	beam.Color = ColorSequence.new(Color3.fromRGB(255, 0, 0))
+	
+	if visibility ~= nil then
+		beam.Enabled = visibility
+	end
+	
+	if color ~= nil then 
+		beam.Color =  ColorSequence.new(color)
+	else
+		ColorSequence.new(Color3.fromRGB(255, 0, 0))
+	end
+	
 	beam.Texture = "http://www.roblox.com/asset/?id=4955566540"
 	beam.TextureMode = "Static"
 	beam.Width0 = 0.2
@@ -213,15 +270,19 @@ local function createBeam(target, highlight, beamType)
 	
 	if highlight then
 		
-		local part = Instance.new("Part", target)
-		part.Transparency = true
+		local part = target:Clone()
+		part.Parent = target
+		for i, v in pairs(part:GetChildren()) do
+			if v:IsA("Part") or v:IsA("Mesh") then
+				v.Transparency = 1
+			end
+		end
 		part.Name = "highlightPart"
-		part.Position = target.PrimaryPart.Position
+		part.PrimaryPart.Position = target.PrimaryPart.Position
 		
 		local highlight = Instance.new("Highlight", target["highlightPart"])
 		highlight.Enabled = true
 	end
-	print("DONE!")
 end
 
 
@@ -235,14 +296,25 @@ for _, loot in ipairs(CollectionService:GetTagged("hidden-metal")) do
 	createBeam(loot)
 end
 
+local function initialize()
+	for i, child in pairs(Workspace:GetChildren()) do
+		if child:IsA("Model") and child.Name:find("Star") then
+			task.wait(.1)
+			if Settings.star_esp_toggled then
+				createBeam(child, false, "star", child['neon_mesh'].Color)
+			else
+				createBeam(child, false, "star", child['neon_mesh'].Color, false)
+			end
 
-Workspace.ChildAdded:Connect(function(child)
-	if child:FindFirstChild("PrimaryPart") then
-		createBeam(child, true, "metal-loot")
+		elseif child:FindFirstChild("PrimaryPart") then
+			if Settings.star_esp_toggled then
+				createBeam(child, true, "metal-loot")
+			else
+				createBeam(child, true, "metal-loot", false)
+			end
+		end
 	end
-end)
-
--- UI --
+end
 
 local function TweenUI(element, length, color)
 	
@@ -259,10 +331,57 @@ local function OnMetalESPToggleButtonClick()
 	toggleMetalESP()
 	
 	if Settings.metal_esp_toggled == true then
-		TweenUI(MetalESPToggleButton, .1, Color3.fromRGB(0, 255, 0))
+		toggleBeamType("metal-loot", true)
+		TweenUI(MetalESPToggleButton, .05, Color3.fromRGB(0, 255, 0))
 	else
-		TweenUI(MetalESPToggleButton, .1, Color3.fromRGB(20, 20, 20))
+		toggleBeamType("metal-loot", false)
+		TweenUI(MetalESPToggleButton, .05, Color3.fromRGB(20, 20, 20))
 	end
 end
 
+local function OnStarESPToggleButtonClick()
+	toggleStarESP()
+
+	if Settings.star_esp_toggled == true then
+		toggleBeamType("star", true)
+		TweenUI(StarESPToggleButton, .05, Color3.fromRGB(0, 255, 0))
+	else
+		toggleBeamType("star", false)
+		TweenUI(StarESPToggleButton, .05, Color3.fromRGB(20, 20, 20))
+	end
+end
+
+initialize()
+
+Workspace.ChildAdded:Connect(function(child)
+	
+	if child:IsA("Model") and child.Name:find("Star") then
+		task.wait(.1)
+		if Settings.star_esp_toggled then
+			createBeam(child, false, "star", child['neon_mesh'].Color)
+		else
+			createBeam(child, false, "star", child['neon_mesh'].Color, false)
+		end
+		
+	elseif child:FindFirstChild("PrimaryPart") then
+		if Settings.star_esp_toggled then
+			createBeam(child, true, "metal-loot")
+		else
+			createBeam(child, true, "metal-loot", false)
+		end
+	end
+end)
+
+UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
+	if gameProcessedEvent then return end
+	if input.KeyCode == Enum.KeyCode.RightShift then
+		if MainGUI.Enabled == false then
+			MainGUI.Enabled = true
+		else
+			MainGUI.Enabled = false
+		end
+	end
+end)
+
 MetalESPToggleButton.MouseButton1Click:Connect(OnMetalESPToggleButtonClick)
+StarESPToggleButton.MouseButton1Click:Connect(OnStarESPToggleButtonClick)
