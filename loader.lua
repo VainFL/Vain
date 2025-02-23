@@ -10,7 +10,7 @@ end
 local function downloadFile(path, func)
     if not isfile(path) then
         local success, content = pcall(function()
-            return game:HttpGet('https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY/main/'..path, true)
+            return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/main/'..path, true)
         end)
 
         if not success or content == '404: Not Found' then
