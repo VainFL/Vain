@@ -278,9 +278,13 @@ local function createBeam(target, highlight, beamType, color, visibility)
 			end
 		end
 		part.Name = "highlightPart"
-		part.PrimaryPart.Position = target.PrimaryPart.Position
+		if part:IsA("Modell") then
+			part.PrimaryPart.Position = target.PrimaryPart.Position
+		else
+			part.Position = target.PrimaryPart.Positionn
+		end
 		
-		local highlight = Instance.new("Highlight", target["highlightPart"])
+		local highlight = Instance.new("Highlight", part)
 		highlight.Enabled = true
 	end
 end
@@ -289,11 +293,19 @@ end
 -- METAL ESP
 
 CollectionService:GetInstanceAddedSignal("hidden-metal"):Connect(function(loot)
-	createBeam(loot)
+	if Settings.star_esp_toggled then
+				createBeam(loot, true, "metal-loot")
+			else
+				createBeam(loot, true, "metal-loot", nil,false)
+			end
 end)
 
 for _, loot in ipairs(CollectionService:GetTagged("hidden-metal")) do
-	createBeam(loot)
+	if Settings.star_esp_toggled then
+				createBeam(loot, true, "metal-loot")
+			else
+				createBeam(loot, true, "metal-loot", nil,false)
+			end
 end
 
 local function initialize()
@@ -308,9 +320,9 @@ local function initialize()
 
 		elseif child:FindFirstChild("PrimaryPart") then
 			if Settings.star_esp_toggled then
-				createBeam(child, true, "metal-loot")
+				createBeam(child, true, "metal-loot", nil)
 			else
-				createBeam(child, true, "metal-loot", false)
+				createBeam(child, true, "metal-loot", nil, false)
 			end
 		end
 	end
