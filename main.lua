@@ -193,8 +193,8 @@ local VisualsButton = ModuleListVisuals:WaitForChild("VisualsButton")
 -- SETTINGS --
 
 Settings = {
-	metal_esp_toggled = false,
-	star_esp_toggled = false,
+	metal_esp_toggled = true,
+	star_esp_toggled = true,
 	
 }
 
@@ -268,7 +268,7 @@ local function createBeam(target, highlight, beamType, color, visibility)
 	end
 
 	
-	if highlight then
+	--[[if highlight then
 		
 		local part = target:Clone()
 		part.Parent = target
@@ -286,7 +286,7 @@ local function createBeam(target, highlight, beamType, color, visibility)
 		
 		local highlight = Instance.new("Highlight", part)
 		highlight.Enabled = true
-	end
+	end--]]
 end
 
 
