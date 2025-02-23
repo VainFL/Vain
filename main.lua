@@ -376,7 +376,7 @@ Workspace.ChildAdded:Connect(function(child)
 		end
 		
 	elseif child:FindFirstChild("PrimaryPart") then
-		if Settings.star_esp_toggled then
+		if Settings.metal_esp_toggled then
 			createBeam(child, true, "metal-loot")
 		else
 			createBeam(child, true, "metal-loot", false)
