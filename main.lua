@@ -293,7 +293,7 @@ end
 -- METAL ESP
 
 CollectionService:GetInstanceAddedSignal("hidden-metal"):Connect(function(loot)
-	if Settings.star_esp_toggled then
+	if Settings.metal_esp_toggled then
 				createBeam(loot, true, "metal-loot")
 			else
 				createBeam(loot, true, "metal-loot", nil,false)
@@ -301,7 +301,7 @@ CollectionService:GetInstanceAddedSignal("hidden-metal"):Connect(function(loot)
 end)
 
 for _, loot in ipairs(CollectionService:GetTagged("hidden-metal")) do
-	if Settings.star_esp_toggled then
+	if Settings.metal_esp_toggled then
 				createBeam(loot, true, "metal-loot")
 			else
 				createBeam(loot, true, "metal-loot", nil,false)
