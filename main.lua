@@ -395,5 +395,9 @@ UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 	end
 end)
 
+player.CharacterAdded:Connect(function()
+	wait(2)
+	initialize()
+end)
 MetalESPToggleButton.MouseButton1Click:Connect(OnMetalESPToggleButtonClick)
 StarESPToggleButton.MouseButton1Click:Connect(OnStarESPToggleButtonClick)
