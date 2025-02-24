@@ -193,8 +193,8 @@ local VisualsButton = ModuleListVisuals:WaitForChild("VisualsButton")
 -- SETTINGS --
 
 Settings = {
-	metal_esp_toggled = true,
-	star_esp_toggled = true,
+	metal_esp_toggled = false,
+	star_esp_toggled = false,
 	
 }
 
