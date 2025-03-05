@@ -16,29 +16,100 @@ local Converted = {
 	["_Visuals1"] = Instance.new("Frame");
 	["_Main1"] = Instance.new("ScrollingFrame");
 	["_UIListLayout1"] = Instance.new("UIListLayout");
-	["_MetalESP"] = Instance.new("Frame");
+	["_METAL_ESP"] = Instance.new("Frame");
 	["_UICorner2"] = Instance.new("UICorner");
 	["_Toggle"] = Instance.new("TextButton");
 	["_UICorner3"] = Instance.new("UICorner");
-	["_ToggleModuleSettings"] = Instance.new("ImageButton");
-	["_StarESP"] = Instance.new("Frame");
+	["_Settings"] = Instance.new("Frame");
 	["_UICorner4"] = Instance.new("UICorner");
-	["_Toggle1"] = Instance.new("TextButton");
+	["_DistanceTrackerEnabled"] = Instance.new("Frame");
 	["_UICorner5"] = Instance.new("UICorner");
-	["_ModuleSettings"] = Instance.new("Frame");
-	["_UIListLayout2"] = Instance.new("UIListLayout");
+	["_Name"] = Instance.new("TextLabel");
+	["_Toggle1"] = Instance.new("TextButton");
 	["_UICorner6"] = Instance.new("UICorner");
-	["_ToggleModuleSettings1"] = Instance.new("TextButton");
+	["_UIListLayout2"] = Instance.new("UIListLayout");
+	["_ModuleName"] = Instance.new("StringValue");
+	["_HighlightEnabled"] = Instance.new("Frame");
 	["_UICorner7"] = Instance.new("UICorner");
+	["_Name1"] = Instance.new("TextLabel");
+	["_Toggle2"] = Instance.new("TextButton");
+	["_UICorner8"] = Instance.new("UICorner");
+	["_UIListLayout3"] = Instance.new("UIListLayout");
+	["_ModuleName1"] = Instance.new("StringValue");
+	["_UIListLayout4"] = Instance.new("UIListLayout");
+	["_ToggleModuleSettings"] = Instance.new("ImageButton");
+	["_STAR_ESP"] = Instance.new("Frame");
+	["_UICorner9"] = Instance.new("UICorner");
+	["_Toggle3"] = Instance.new("TextButton");
+	["_UICorner10"] = Instance.new("UICorner");
+	["_ToggleModuleSettings1"] = Instance.new("ImageButton");
+	["_Settings1"] = Instance.new("Frame");
+	["_UICorner11"] = Instance.new("UICorner");
+	["_DistanceTrackerEnabled1"] = Instance.new("Frame");
+	["_UICorner12"] = Instance.new("UICorner");
+	["_Name2"] = Instance.new("TextLabel");
+	["_Toggle4"] = Instance.new("TextButton");
+	["_UICorner13"] = Instance.new("UICorner");
+	["_UIListLayout5"] = Instance.new("UIListLayout");
+	["_ModuleName2"] = Instance.new("StringValue");
+	["_HighlightEnabled1"] = Instance.new("Frame");
+	["_UICorner14"] = Instance.new("UICorner");
+	["_Name3"] = Instance.new("TextLabel");
+	["_Toggle5"] = Instance.new("TextButton");
+	["_UICorner15"] = Instance.new("UICorner");
+	["_UIListLayout6"] = Instance.new("UIListLayout");
+	["_ModuleName3"] = Instance.new("StringValue");
+	["_UIListLayout7"] = Instance.new("UIListLayout");
+	["_BEE_ESP"] = Instance.new("Frame");
+	["_UICorner16"] = Instance.new("UICorner");
+	["_Toggle6"] = Instance.new("TextButton");
+	["_UICorner17"] = Instance.new("UICorner");
+	["_ToggleModuleSettings2"] = Instance.new("ImageButton");
+	["_Settings2"] = Instance.new("Frame");
+	["_UICorner18"] = Instance.new("UICorner");
+	["_DistanceTrackerEnabled2"] = Instance.new("Frame");
+	["_UICorner19"] = Instance.new("UICorner");
+	["_Name4"] = Instance.new("TextLabel");
+	["_Toggle7"] = Instance.new("TextButton");
+	["_UICorner20"] = Instance.new("UICorner");
+	["_UIListLayout8"] = Instance.new("UIListLayout");
+	["_ModuleName4"] = Instance.new("StringValue");
+	["_HighlightEnabled2"] = Instance.new("Frame");
+	["_UICorner21"] = Instance.new("UICorner");
+	["_Name5"] = Instance.new("TextLabel");
+	["_Toggle8"] = Instance.new("TextButton");
+	["_UICorner22"] = Instance.new("UICorner");
+	["_UIListLayout9"] = Instance.new("UIListLayout");
+	["_ModuleName5"] = Instance.new("StringValue");
+	["_UIListLayout10"] = Instance.new("UIListLayout");
+	["_UICorner23"] = Instance.new("UICorner");
+	["_Header"] = Instance.new("Frame");
+	["_UICorner24"] = Instance.new("UICorner");
+	["_nn"] = Instance.new("TextLabel");
+	["_UIListLayout11"] = Instance.new("UIListLayout");
+	["_name"] = Instance.new("TextLabel");
+	["_Combat"] = Instance.new("Frame");
+	["_Main2"] = Instance.new("ScrollingFrame");
+	["_UIListLayout12"] = Instance.new("UIListLayout");
+	["_AimAssist"] = Instance.new("Frame");
+	["_UICorner25"] = Instance.new("UICorner");
+	["_Toggle9"] = Instance.new("TextButton");
+	["_UICorner26"] = Instance.new("UICorner");
+	["_UICorner27"] = Instance.new("UICorner");
+	["_Header1"] = Instance.new("Frame");
+	["_UICorner28"] = Instance.new("UICorner");
+	["_nn1"] = Instance.new("TextLabel");
+	["_UIListLayout13"] = Instance.new("UIListLayout");
+	["_name1"] = Instance.new("TextLabel");
 }
 
 -- Properties:
 
+Converted["_VainUI"].DisplayOrder = 999999999
 Converted["_VainUI"].ResetOnSpawn = false
 Converted["_VainUI"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Converted["_VainUI"].Name = "VainUI"
---Converted["_VainUI"].Parent = game:GetService("CoreGui")
-Converted["_VainUI"].Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Converted["_VainUI"].Parent = game:GetService("CoreGui")
 
 Converted["_Main"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Main"].BackgroundTransparency = 1
@@ -51,7 +122,7 @@ Converted["_Main"].Parent = Converted["_VainUI"]
 Converted["_ModuleList"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
 Converted["_ModuleList"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ModuleList"].BorderSizePixel = 0
-Converted["_ModuleList"].Size = UDim2.new(0.0942297652, 0, 1, 0)
+Converted["_ModuleList"].Size = UDim2.new(0.0850000009, 0, 1, 0)
 Converted["_ModuleList"].Name = "ModuleList"
 Converted["_ModuleList"].Parent = Converted["_Main"]
 
@@ -94,11 +165,11 @@ Converted["_UICorner1"].Parent = Converted["_ModuleList"]
 Converted["_Modules"].Name = "Modules"
 Converted["_Modules"].Parent = Converted["_Main"]
 
-Converted["_Visuals1"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_Visuals1"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
 Converted["_Visuals1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Visuals1"].BorderSizePixel = 0
 Converted["_Visuals1"].Position = UDim2.new(0.129449829, 0, 0.0420711972, 0)
-Converted["_Visuals1"].Size = UDim2.new(0.123786435, 0, 0.915857613, 0)
+Converted["_Visuals1"].Size = UDim2.new(0.100000001, 0, 0.916000009, 0)
 Converted["_Visuals1"].Name = "Visuals"
 Converted["_Visuals1"].Parent = Converted["_Modules"]
 
@@ -111,8 +182,8 @@ Converted["_Main1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_Main1"].BackgroundTransparency = 1
 Converted["_Main1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Main1"].BorderSizePixel = 0
-Converted["_Main1"].Position = UDim2.new(0.0588235222, 0, 0.0176678449, 0)
-Converted["_Main1"].Size = UDim2.new(0.87843138, 0, 0.961130738, 0)
+Converted["_Main1"].Position = UDim2.new(0.0588234961, 0, 0.0847951397, 0)
+Converted["_Main1"].Size = UDim2.new(0.87843138, 0, 0.894003451, 0)
 Converted["_Main1"].Name = "Main"
 Converted["_Main1"].Parent = Converted["_Visuals1"]
 
@@ -121,16 +192,17 @@ Converted["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Cente
 Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout1"].Parent = Converted["_Main1"]
 
-Converted["_MetalESP"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
-Converted["_MetalESP"].BackgroundTransparency = 1
-Converted["_MetalESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_MetalESP"].BorderSizePixel = 0
-Converted["_MetalESP"].LayoutOrder = 1
-Converted["_MetalESP"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
-Converted["_MetalESP"].Name = "MetalESP"
-Converted["_MetalESP"].Parent = Converted["_Main1"]
+Converted["_METAL_ESP"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_METAL_ESP"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_METAL_ESP"].BackgroundTransparency = 1
+Converted["_METAL_ESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_METAL_ESP"].BorderSizePixel = 0
+Converted["_METAL_ESP"].LayoutOrder = 1
+Converted["_METAL_ESP"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
+Converted["_METAL_ESP"].Name = "METAL_ESP"
+Converted["_METAL_ESP"].Parent = Converted["_Main1"]
 
-Converted["_UICorner2"].Parent = Converted["_MetalESP"]
+Converted["_UICorner2"].Parent = Converted["_METAL_ESP"]
 
 Converted["_Toggle"].Font = Enum.Font.Arial
 Converted["_Toggle"].Text = "Metal ESP"
@@ -139,11 +211,127 @@ Converted["_Toggle"].TextSize = 14
 Converted["_Toggle"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
 Converted["_Toggle"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_Toggle"].BorderSizePixel = 0
-Converted["_Toggle"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Toggle"].Size = UDim2.new(0.800000012, 0, 1, 0)
 Converted["_Toggle"].Name = "Toggle"
-Converted["_Toggle"].Parent = Converted["_MetalESP"]
+Converted["_Toggle"].Parent = Converted["_METAL_ESP"]
 
 Converted["_UICorner3"].Parent = Converted["_Toggle"]
+
+Converted["_Settings"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_Settings"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_Settings"].BackgroundTransparency = 0.5
+Converted["_Settings"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Settings"].BorderSizePixel = 0
+Converted["_Settings"].Position = UDim2.new(0, 0, 1, 0)
+Converted["_Settings"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Settings"].Visible = false
+Converted["_Settings"].Name = "Settings"
+Converted["_Settings"].Parent = Converted["_METAL_ESP"]
+
+Converted["_UICorner4"].Parent = Converted["_Settings"]
+
+Converted["_DistanceTrackerEnabled"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_DistanceTrackerEnabled"].BackgroundTransparency = 0.5
+Converted["_DistanceTrackerEnabled"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DistanceTrackerEnabled"].BorderSizePixel = 0
+Converted["_DistanceTrackerEnabled"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_DistanceTrackerEnabled"].Name = "DistanceTrackerEnabled"
+Converted["_DistanceTrackerEnabled"].Parent = Converted["_Settings"]
+
+Converted["_UICorner5"].Parent = Converted["_DistanceTrackerEnabled"]
+
+Converted["_Name"].Font = Enum.Font.SourceSans
+Converted["_Name"].Text = "Show Distance"
+Converted["_Name"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name"].TextSize = 14
+Converted["_Name"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name"].BackgroundTransparency = 1
+Converted["_Name"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name"].BorderSizePixel = 0
+Converted["_Name"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name"].Name = "Name"
+Converted["_Name"].Parent = Converted["_DistanceTrackerEnabled"]
+
+Converted["_Toggle1"].Font = Enum.Font.SourceSans
+Converted["_Toggle1"].RichText = true
+Converted["_Toggle1"].Text = ""
+Converted["_Toggle1"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle1"].TextScaled = true
+Converted["_Toggle1"].TextSize = 14
+Converted["_Toggle1"].TextWrapped = true
+Converted["_Toggle1"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle1"].BorderSizePixel = 0
+Converted["_Toggle1"].LayoutOrder = 1
+Converted["_Toggle1"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle1"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle1"].Name = "Toggle"
+Converted["_Toggle1"].Parent = Converted["_DistanceTrackerEnabled"]
+
+Converted["_UICorner6"].Parent = Converted["_Toggle1"]
+
+Converted["_UIListLayout2"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout2"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout2"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout2"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout2"].Parent = Converted["_DistanceTrackerEnabled"]
+
+Converted["_ModuleName"].Value = "SHOW_DISTANCE"
+Converted["_ModuleName"].Name = "ModuleName"
+Converted["_ModuleName"].Parent = Converted["_DistanceTrackerEnabled"]
+
+Converted["_HighlightEnabled"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_HighlightEnabled"].BackgroundTransparency = 0.5
+Converted["_HighlightEnabled"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HighlightEnabled"].BorderSizePixel = 0
+Converted["_HighlightEnabled"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_HighlightEnabled"].Name = "HighlightEnabled"
+Converted["_HighlightEnabled"].Parent = Converted["_Settings"]
+
+Converted["_UICorner7"].Parent = Converted["_HighlightEnabled"]
+
+Converted["_Name1"].Font = Enum.Font.SourceSans
+Converted["_Name1"].Text = "Highlight Target"
+Converted["_Name1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name1"].TextSize = 14
+Converted["_Name1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name1"].BackgroundTransparency = 1
+Converted["_Name1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name1"].BorderSizePixel = 0
+Converted["_Name1"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name1"].Name = "Name"
+Converted["_Name1"].Parent = Converted["_HighlightEnabled"]
+
+Converted["_Toggle2"].Font = Enum.Font.SourceSans
+Converted["_Toggle2"].RichText = true
+Converted["_Toggle2"].Text = ""
+Converted["_Toggle2"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle2"].TextScaled = true
+Converted["_Toggle2"].TextSize = 14
+Converted["_Toggle2"].TextWrapped = true
+Converted["_Toggle2"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle2"].BorderSizePixel = 0
+Converted["_Toggle2"].LayoutOrder = 1
+Converted["_Toggle2"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle2"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle2"].Name = "Toggle"
+Converted["_Toggle2"].Parent = Converted["_HighlightEnabled"]
+
+Converted["_UICorner8"].Parent = Converted["_Toggle2"]
+
+Converted["_UIListLayout3"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout3"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout3"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout3"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout3"].Parent = Converted["_HighlightEnabled"]
+
+Converted["_ModuleName1"].Value = "HIGHLIGHT"
+Converted["_ModuleName1"].Name = "ModuleName"
+Converted["_ModuleName1"].Parent = Converted["_HighlightEnabled"]
+
+Converted["_UIListLayout4"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout4"].Parent = Converted["_Settings"]
 
 Converted["_ToggleModuleSettings"].Image = "http://www.roblox.com/asset/?id=138007024966757"
 --Converted["_ToggleModuleSettings"].ImageContent = Content
@@ -152,75 +340,458 @@ Converted["_ToggleModuleSettings"].BackgroundColor3 = Color3.fromRGB(255, 255, 2
 Converted["_ToggleModuleSettings"].BackgroundTransparency = 1
 Converted["_ToggleModuleSettings"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ToggleModuleSettings"].BorderSizePixel = 0
-Converted["_ToggleModuleSettings"].LayoutOrder = 1
 Converted["_ToggleModuleSettings"].Position = UDim2.new(0.800000012, 0, 0, 0)
 Converted["_ToggleModuleSettings"].Size = UDim2.new(0.200000003, 0, 1, 0)
-Converted["_ToggleModuleSettings"].ZIndex = 22
 Converted["_ToggleModuleSettings"].Name = "ToggleModuleSettings"
-Converted["_ToggleModuleSettings"].Parent = Converted["_MetalESP"]
+Converted["_ToggleModuleSettings"].Parent = Converted["_METAL_ESP"]
 
-Converted["_StarESP"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
-Converted["_StarESP"].BackgroundTransparency = 1
-Converted["_StarESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_StarESP"].BorderSizePixel = 0
-Converted["_StarESP"].LayoutOrder = 3
-Converted["_StarESP"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
-Converted["_StarESP"].Name = "StarESP"
-Converted["_StarESP"].Parent = Converted["_Main1"]
+Converted["_STAR_ESP"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_STAR_ESP"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_STAR_ESP"].BackgroundTransparency = 1
+Converted["_STAR_ESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_STAR_ESP"].BorderSizePixel = 0
+Converted["_STAR_ESP"].LayoutOrder = 1
+Converted["_STAR_ESP"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
+Converted["_STAR_ESP"].Name = "STAR_ESP"
+Converted["_STAR_ESP"].Parent = Converted["_Main1"]
 
-Converted["_UICorner4"].Parent = Converted["_StarESP"]
+Converted["_UICorner9"].Parent = Converted["_STAR_ESP"]
 
-Converted["_Toggle1"].Font = Enum.Font.Arial
-Converted["_Toggle1"].Text = "Star ESP"
-Converted["_Toggle1"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Toggle1"].TextSize = 14
-Converted["_Toggle1"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
-Converted["_Toggle1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Toggle1"].BorderSizePixel = 0
-Converted["_Toggle1"].Size = UDim2.new(1, 0, 1, 0)
-Converted["_Toggle1"].Name = "Toggle"
-Converted["_Toggle1"].Parent = Converted["_StarESP"]
+Converted["_Toggle3"].Font = Enum.Font.Arial
+Converted["_Toggle3"].Text = "Star ESP"
+Converted["_Toggle3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle3"].TextSize = 14
+Converted["_Toggle3"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_Toggle3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle3"].BorderSizePixel = 0
+Converted["_Toggle3"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Toggle3"].Name = "Toggle"
+Converted["_Toggle3"].Parent = Converted["_STAR_ESP"]
 
-Converted["_UICorner5"].Parent = Converted["_Toggle1"]
+Converted["_UICorner10"].Parent = Converted["_Toggle3"]
 
-Converted["_ModuleSettings"].AutomaticSize = Enum.AutomaticSize.Y
-Converted["_ModuleSettings"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
-Converted["_ModuleSettings"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_ModuleSettings"].BorderSizePixel = 0
-Converted["_ModuleSettings"].Position = UDim2.new(0, 0, 1, 0)
-Converted["_ModuleSettings"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
-Converted["_ModuleSettings"].Visible = false
-Converted["_ModuleSettings"].Name = "ModuleSettings"
-Converted["_ModuleSettings"].Parent = Converted["_Main1"]
-
-Converted["_UIListLayout2"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout2"].Parent = Converted["_ModuleSettings"]
-
-Converted["_UICorner6"].Parent = Converted["_ModuleSettings"]
-
-Converted["_ToggleModuleSettings1"].Font = Enum.Font.SourceSans
-Converted["_ToggleModuleSettings1"].TextColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_ToggleModuleSettings1"].TextSize = 14
+Converted["_ToggleModuleSettings1"].Image = "http://www.roblox.com/asset/?id=138007024966757"
+--Converted["_ToggleModuleSettings1"].ImageContent = Content
+Converted["_ToggleModuleSettings1"].ScaleType = Enum.ScaleType.Fit
 Converted["_ToggleModuleSettings1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Converted["_ToggleModuleSettings1"].BackgroundTransparency = 1
 Converted["_ToggleModuleSettings1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
 Converted["_ToggleModuleSettings1"].BorderSizePixel = 0
-Converted["_ToggleModuleSettings1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_ToggleModuleSettings1"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_ToggleModuleSettings1"].Size = UDim2.new(0.200000003, 0, 1, 0)
 Converted["_ToggleModuleSettings1"].Name = "ToggleModuleSettings"
-Converted["_ToggleModuleSettings1"].Parent = Converted["_ModuleSettings"]
+Converted["_ToggleModuleSettings1"].Parent = Converted["_STAR_ESP"]
 
-Converted["_UICorner7"].Parent = Converted["_Visuals1"]
+Converted["_Settings1"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_Settings1"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_Settings1"].BackgroundTransparency = 0.5
+Converted["_Settings1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Settings1"].BorderSizePixel = 0
+Converted["_Settings1"].Position = UDim2.new(0, 0, 1, 0)
+Converted["_Settings1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Settings1"].Visible = false
+Converted["_Settings1"].Name = "Settings"
+Converted["_Settings1"].Parent = Converted["_STAR_ESP"]
+
+Converted["_UICorner11"].Parent = Converted["_Settings1"]
+
+Converted["_DistanceTrackerEnabled1"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_DistanceTrackerEnabled1"].BackgroundTransparency = 0.5
+Converted["_DistanceTrackerEnabled1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DistanceTrackerEnabled1"].BorderSizePixel = 0
+Converted["_DistanceTrackerEnabled1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_DistanceTrackerEnabled1"].Name = "DistanceTrackerEnabled"
+Converted["_DistanceTrackerEnabled1"].Parent = Converted["_Settings1"]
+
+Converted["_UICorner12"].Parent = Converted["_DistanceTrackerEnabled1"]
+
+Converted["_Name2"].Font = Enum.Font.SourceSans
+Converted["_Name2"].Text = "Show Distance"
+Converted["_Name2"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name2"].TextSize = 14
+Converted["_Name2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name2"].BackgroundTransparency = 1
+Converted["_Name2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name2"].BorderSizePixel = 0
+Converted["_Name2"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name2"].Name = "Name"
+Converted["_Name2"].Parent = Converted["_DistanceTrackerEnabled1"]
+
+Converted["_Toggle4"].Font = Enum.Font.SourceSans
+Converted["_Toggle4"].RichText = true
+Converted["_Toggle4"].Text = ""
+Converted["_Toggle4"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle4"].TextScaled = true
+Converted["_Toggle4"].TextSize = 14
+Converted["_Toggle4"].TextWrapped = true
+Converted["_Toggle4"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle4"].BorderSizePixel = 0
+Converted["_Toggle4"].LayoutOrder = 1
+Converted["_Toggle4"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle4"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle4"].Name = "Toggle"
+Converted["_Toggle4"].Parent = Converted["_DistanceTrackerEnabled1"]
+
+Converted["_UICorner13"].Parent = Converted["_Toggle4"]
+
+Converted["_UIListLayout5"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout5"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout5"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout5"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout5"].Parent = Converted["_DistanceTrackerEnabled1"]
+
+Converted["_ModuleName2"].Value = "SHOW_DISTANCE"
+Converted["_ModuleName2"].Name = "ModuleName"
+Converted["_ModuleName2"].Parent = Converted["_DistanceTrackerEnabled1"]
+
+Converted["_HighlightEnabled1"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_HighlightEnabled1"].BackgroundTransparency = 0.5
+Converted["_HighlightEnabled1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HighlightEnabled1"].BorderSizePixel = 0
+Converted["_HighlightEnabled1"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_HighlightEnabled1"].Name = "HighlightEnabled"
+Converted["_HighlightEnabled1"].Parent = Converted["_Settings1"]
+
+Converted["_UICorner14"].Parent = Converted["_HighlightEnabled1"]
+
+Converted["_Name3"].Font = Enum.Font.SourceSans
+Converted["_Name3"].Text = "Highlight Target"
+Converted["_Name3"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name3"].TextSize = 14
+Converted["_Name3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name3"].BackgroundTransparency = 1
+Converted["_Name3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name3"].BorderSizePixel = 0
+Converted["_Name3"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name3"].Name = "Name"
+Converted["_Name3"].Parent = Converted["_HighlightEnabled1"]
+
+Converted["_Toggle5"].Font = Enum.Font.SourceSans
+Converted["_Toggle5"].RichText = true
+Converted["_Toggle5"].Text = ""
+Converted["_Toggle5"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle5"].TextScaled = true
+Converted["_Toggle5"].TextSize = 14
+Converted["_Toggle5"].TextWrapped = true
+Converted["_Toggle5"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle5"].BorderSizePixel = 0
+Converted["_Toggle5"].LayoutOrder = 1
+Converted["_Toggle5"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle5"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle5"].Name = "Toggle"
+Converted["_Toggle5"].Parent = Converted["_HighlightEnabled1"]
+
+Converted["_UICorner15"].Parent = Converted["_Toggle5"]
+
+Converted["_UIListLayout6"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout6"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout6"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout6"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout6"].Parent = Converted["_HighlightEnabled1"]
+
+Converted["_ModuleName3"].Value = "HIGHLIGHT"
+Converted["_ModuleName3"].Name = "ModuleName"
+Converted["_ModuleName3"].Parent = Converted["_HighlightEnabled1"]
+
+Converted["_UIListLayout7"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout7"].Parent = Converted["_Settings1"]
+
+Converted["_BEE_ESP"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_BEE_ESP"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_BEE_ESP"].BackgroundTransparency = 1
+Converted["_BEE_ESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_BEE_ESP"].BorderSizePixel = 0
+Converted["_BEE_ESP"].LayoutOrder = 1
+Converted["_BEE_ESP"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
+Converted["_BEE_ESP"].Name = "BEE_ESP"
+Converted["_BEE_ESP"].Parent = Converted["_Main1"]
+
+Converted["_UICorner16"].Parent = Converted["_BEE_ESP"]
+
+Converted["_Toggle6"].Font = Enum.Font.Arial
+Converted["_Toggle6"].Text = "Bee ESP"
+Converted["_Toggle6"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle6"].TextSize = 14
+Converted["_Toggle6"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_Toggle6"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle6"].BorderSizePixel = 0
+Converted["_Toggle6"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Toggle6"].Name = "Toggle"
+Converted["_Toggle6"].Parent = Converted["_BEE_ESP"]
+
+Converted["_UICorner17"].Parent = Converted["_Toggle6"]
+
+Converted["_ToggleModuleSettings2"].Image = "http://www.roblox.com/asset/?id=138007024966757"
+--Converted["_ToggleModuleSettings2"].ImageContent = Content
+Converted["_ToggleModuleSettings2"].ScaleType = Enum.ScaleType.Fit
+Converted["_ToggleModuleSettings2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ToggleModuleSettings2"].BackgroundTransparency = 1
+Converted["_ToggleModuleSettings2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ToggleModuleSettings2"].BorderSizePixel = 0
+Converted["_ToggleModuleSettings2"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_ToggleModuleSettings2"].Size = UDim2.new(0.200000003, 0, 1, 0)
+Converted["_ToggleModuleSettings2"].Name = "ToggleModuleSettings"
+Converted["_ToggleModuleSettings2"].Parent = Converted["_BEE_ESP"]
+
+Converted["_Settings2"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_Settings2"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_Settings2"].BackgroundTransparency = 0.5
+Converted["_Settings2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Settings2"].BorderSizePixel = 0
+Converted["_Settings2"].Position = UDim2.new(0, 0, 1, 0)
+Converted["_Settings2"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Settings2"].Visible = false
+Converted["_Settings2"].Name = "Settings"
+Converted["_Settings2"].Parent = Converted["_BEE_ESP"]
+
+Converted["_UICorner18"].Parent = Converted["_Settings2"]
+
+Converted["_DistanceTrackerEnabled2"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_DistanceTrackerEnabled2"].BackgroundTransparency = 0.5
+Converted["_DistanceTrackerEnabled2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DistanceTrackerEnabled2"].BorderSizePixel = 0
+Converted["_DistanceTrackerEnabled2"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_DistanceTrackerEnabled2"].Name = "DistanceTrackerEnabled"
+Converted["_DistanceTrackerEnabled2"].Parent = Converted["_Settings2"]
+
+Converted["_UICorner19"].Parent = Converted["_DistanceTrackerEnabled2"]
+
+Converted["_Name4"].Font = Enum.Font.SourceSans
+Converted["_Name4"].Text = "Show Distance"
+Converted["_Name4"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name4"].TextSize = 14
+Converted["_Name4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name4"].BackgroundTransparency = 1
+Converted["_Name4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name4"].BorderSizePixel = 0
+Converted["_Name4"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name4"].Name = "Name"
+Converted["_Name4"].Parent = Converted["_DistanceTrackerEnabled2"]
+
+Converted["_Toggle7"].Font = Enum.Font.SourceSans
+Converted["_Toggle7"].RichText = true
+Converted["_Toggle7"].Text = ""
+Converted["_Toggle7"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle7"].TextScaled = true
+Converted["_Toggle7"].TextSize = 14
+Converted["_Toggle7"].TextWrapped = true
+Converted["_Toggle7"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle7"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle7"].BorderSizePixel = 0
+Converted["_Toggle7"].LayoutOrder = 1
+Converted["_Toggle7"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle7"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle7"].Name = "Toggle"
+Converted["_Toggle7"].Parent = Converted["_DistanceTrackerEnabled2"]
+
+Converted["_UICorner20"].Parent = Converted["_Toggle7"]
+
+Converted["_UIListLayout8"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout8"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout8"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout8"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout8"].Parent = Converted["_DistanceTrackerEnabled2"]
+
+Converted["_ModuleName4"].Value = "SHOW_DISTANCE"
+Converted["_ModuleName4"].Name = "ModuleName"
+Converted["_ModuleName4"].Parent = Converted["_DistanceTrackerEnabled2"]
+
+Converted["_HighlightEnabled2"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_HighlightEnabled2"].BackgroundTransparency = 0.5
+Converted["_HighlightEnabled2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HighlightEnabled2"].BorderSizePixel = 0
+Converted["_HighlightEnabled2"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_HighlightEnabled2"].Name = "HighlightEnabled"
+Converted["_HighlightEnabled2"].Parent = Converted["_Settings2"]
+
+Converted["_UICorner21"].Parent = Converted["_HighlightEnabled2"]
+
+Converted["_Name5"].Font = Enum.Font.SourceSans
+Converted["_Name5"].Text = "Highlight Target"
+Converted["_Name5"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name5"].TextSize = 14
+Converted["_Name5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name5"].BackgroundTransparency = 1
+Converted["_Name5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name5"].BorderSizePixel = 0
+Converted["_Name5"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name5"].Name = "Name"
+Converted["_Name5"].Parent = Converted["_HighlightEnabled2"]
+
+Converted["_Toggle8"].Font = Enum.Font.SourceSans
+Converted["_Toggle8"].RichText = true
+Converted["_Toggle8"].Text = ""
+Converted["_Toggle8"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle8"].TextScaled = true
+Converted["_Toggle8"].TextSize = 14
+Converted["_Toggle8"].TextWrapped = true
+Converted["_Toggle8"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle8"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle8"].BorderSizePixel = 0
+Converted["_Toggle8"].LayoutOrder = 1
+Converted["_Toggle8"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle8"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle8"].Name = "Toggle"
+Converted["_Toggle8"].Parent = Converted["_HighlightEnabled2"]
+
+Converted["_UICorner22"].Parent = Converted["_Toggle8"]
+
+Converted["_UIListLayout9"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout9"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout9"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout9"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout9"].Parent = Converted["_HighlightEnabled2"]
+
+Converted["_ModuleName5"].Value = "HIGHLIGHT"
+Converted["_ModuleName5"].Name = "ModuleName"
+Converted["_ModuleName5"].Parent = Converted["_HighlightEnabled2"]
+
+Converted["_UIListLayout10"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout10"].Parent = Converted["_Settings2"]
+
+Converted["_UICorner23"].Parent = Converted["_Visuals1"]
+
+Converted["_Header"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_Header"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Header"].BorderSizePixel = 0
+Converted["_Header"].Size = UDim2.new(1.00000012, 0, 0.0584502965, 0)
+Converted["_Header"].Name = "Header"
+Converted["_Header"].Parent = Converted["_Visuals1"]
+
+Converted["_UICorner24"].Parent = Converted["_Header"]
+
+Converted["_nn"].Font = Enum.Font.SourceSans
+Converted["_nn"].Text = ""
+Converted["_nn"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_nn"].TextSize = 14
+Converted["_nn"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_nn"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_nn"].BorderSizePixel = 0
+Converted["_nn"].LayoutOrder = 3
+Converted["_nn"].Size = UDim2.new(1, 0, 0.100000001, 0)
+Converted["_nn"].Name = "nn"
+Converted["_nn"].Parent = Converted["_Header"]
+
+Converted["_UIListLayout11"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout11"].Parent = Converted["_Header"]
+
+Converted["_name"].Font = Enum.Font.SourceSans
+Converted["_name"].Text = "VISUALS"
+Converted["_name"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_name"].TextSize = 14
+Converted["_name"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_name"].BackgroundTransparency = 1
+Converted["_name"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_name"].BorderSizePixel = 0
+Converted["_name"].LayoutOrder = 1
+Converted["_name"].Size = UDim2.new(1, 0, 0.899999976, 0)
+Converted["_name"].Name = "name"
+Converted["_name"].Parent = Converted["_Header"]
+
+Converted["_Combat"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_Combat"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Combat"].BorderSizePixel = 0
+Converted["_Combat"].Position = UDim2.new(0.259000003, 0, 0.0419999994, 0)
+Converted["_Combat"].Size = UDim2.new(0.100000001, 0, 0.916000009, 0)
+Converted["_Combat"].Name = "Combat"
+Converted["_Combat"].Parent = Converted["_Modules"]
+
+Converted["_Main2"].AutomaticCanvasSize = Enum.AutomaticSize.Y
+Converted["_Main2"].CanvasSize = UDim2.new(0, 0, 0, 0)
+Converted["_Main2"].ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main2"].ScrollBarImageTransparency = 1
+Converted["_Main2"].Active = true
+Converted["_Main2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Main2"].BackgroundTransparency = 1
+Converted["_Main2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Main2"].BorderSizePixel = 0
+Converted["_Main2"].Position = UDim2.new(0.0588234961, 0, 0.0847951397, 0)
+Converted["_Main2"].Size = UDim2.new(0.87843138, 0, 0.894003451, 0)
+Converted["_Main2"].Name = "Main"
+Converted["_Main2"].Parent = Converted["_Combat"]
+
+Converted["_UIListLayout12"].Padding = UDim.new(0, 5)
+Converted["_UIListLayout12"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout12"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout12"].Parent = Converted["_Main2"]
+
+Converted["_AimAssist"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_AimAssist"].BackgroundTransparency = 1
+Converted["_AimAssist"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_AimAssist"].BorderSizePixel = 0
+Converted["_AimAssist"].LayoutOrder = 3
+Converted["_AimAssist"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
+Converted["_AimAssist"].Name = "AimAssist"
+Converted["_AimAssist"].Parent = Converted["_Main2"]
+
+Converted["_UICorner25"].Parent = Converted["_AimAssist"]
+
+Converted["_Toggle9"].Font = Enum.Font.Arial
+Converted["_Toggle9"].Text = "AimAssist"
+Converted["_Toggle9"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle9"].TextSize = 14
+Converted["_Toggle9"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_Toggle9"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle9"].BorderSizePixel = 0
+Converted["_Toggle9"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Toggle9"].Name = "Toggle"
+Converted["_Toggle9"].Parent = Converted["_AimAssist"]
+
+Converted["_UICorner26"].Parent = Converted["_Toggle9"]
+
+Converted["_UICorner27"].Parent = Converted["_Combat"]
+
+Converted["_Header1"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_Header1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Header1"].BorderSizePixel = 0
+Converted["_Header1"].Size = UDim2.new(1.00000012, 0, 0.0584502965, 0)
+Converted["_Header1"].Name = "Header"
+Converted["_Header1"].Parent = Converted["_Combat"]
+
+Converted["_UICorner28"].Parent = Converted["_Header1"]
+
+Converted["_nn1"].Font = Enum.Font.SourceSans
+Converted["_nn1"].Text = ""
+Converted["_nn1"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_nn1"].TextSize = 14
+Converted["_nn1"].BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_nn1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_nn1"].BorderSizePixel = 0
+Converted["_nn1"].LayoutOrder = 3
+Converted["_nn1"].Size = UDim2.new(1, 0, 0.100000001, 0)
+Converted["_nn1"].Name = "nn"
+Converted["_nn1"].Parent = Converted["_Header1"]
+
+Converted["_UIListLayout13"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout13"].Parent = Converted["_Header1"]
+
+Converted["_name1"].Font = Enum.Font.SourceSans
+Converted["_name1"].Text = "COMBAT"
+Converted["_name1"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_name1"].TextSize = 14
+Converted["_name1"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_name1"].BackgroundTransparency = 1
+Converted["_name1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_name1"].BorderSizePixel = 0
+Converted["_name1"].LayoutOrder = 1
+Converted["_name1"].Size = UDim2.new(1, 0, 0.899999976, 0)
+Converted["_name1"].Name = "name"
+Converted["_name1"].Parent = Converted["_Header1"]
 
 
 
 -- VARIABLES --
 
 local CollectionService = game:GetService("CollectionService")
+local TeamService = game:GetService("Teams")
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
 local Lighting = game:GetService("Lighting")
 local Players = game:GetService("Players")
 local Workspace = game.Workspace
+local RunService = game:GetService("RunService")
 
 -- UI VARIABLES --
 
@@ -234,15 +805,22 @@ local Main = MainGUI:WaitForChild("Main")
 local Modules = Main:WaitForChild("Modules")
 
 local ModuleVisuals = Modules:WaitForChild("Visuals")
+local ModuleCombat = Modules:WaitForChild("Combat")
 
-local ModuleSettingsFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("ModuleSettings")
-
-local MetalESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("MetalESP")
+local MetalESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("METAL_ESP")
 local MetalESPToggleButton = MetalESPFrame:WaitForChild("Toggle")
 local ToggleMetalESPModuleSettingsButton = MetalESPFrame:WaitForChild("ToggleModuleSettings")
 
-local StarESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("StarESP")
+local StarESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("STAR_ESP")
 local StarESPToggleButton = StarESPFrame:WaitForChild("Toggle")
+local ToggleStarESPModuleSettingsButton = StarESPFrame:WaitForChild("ToggleModuleSettings")
+
+local BeeESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("BEE_ESP")
+local BeeESPToggleButton = BeeESPFrame:WaitForChild("Toggle")
+local ToggleBeeESPModuleSettingsButton = BeeESPFrame:WaitForChild("ToggleModuleSettings")
+
+local AimAssistFrame =  ModuleCombat:WaitForChild("Main"):WaitForChild("AimAssist")
+local AimAssistToggleButton = AimAssistFrame:WaitForChild("Toggle")
 
 local ModuleList = Main:WaitForChild("ModuleList")
 local Container = ModuleList:WaitForChild("Container")
@@ -258,20 +836,115 @@ Settings = {
 
 	METAL_ESP = {
 		ENABLED = false,
+		COLOR = Color3.fromRGB(255,0,0),
+		SHOW_DISTANCE = false,
+		HIGHLIGHT = false,
+		CATEGORY = 'metal-loot',
 	},
 
 	STAR_ESP = {
 		ENABLED = false,
+		SHOW_DISTANCE = false,
+		HIGHLIGHT = false,
+		CATEGORY = 'star',
 	},
 
 	keybinds = {
 
-	}
-}
+	},
+	
+	BEE_ESP = {
+		ENABLED = false,
+		SHOW_DISTANCE = false,
+		HIGHLIGHT = false,
+		CATEGORY = 'bee',
+	},
+	
+	AIM_ASSIST = {
+		ENABLED = false,
+	},
 
+}
 Beams = {}
+Highlights = {}
+Trackers = {}
 
 -- FUNCTIONS --
+
+
+
+local function getAllPlayers()
+	return Players:GetPlayers()
+end
+
+local function getNearestPlayer()
+	
+	local closestPlayer = nil
+	local minDistance = 1
+	local closestDistance = 35
+	local playerLookDirection
+	if player and player.Character then
+		playerLookDirection = player.Character.HumanoidRootPart.CFrame.LookVector 
+	end
+
+	for _, currentPlayer in pairs(game.Players:GetPlayers()) do
+		if currentPlayer == player or currentPlayer.Team == player.Team then continue end
+		if currentPlayer.Character and currentPlayer.Character:FindFirstChild("HumanoidRootPart") then
+			if currentPlayer.Character:FindFirstChild("Humanoid").Health > 0 then
+				local distance = (currentPlayer.Character.HumanoidRootPart.Position - player.Character.HumanoidRootPart.Position).Magnitude
+				local toPlayerDirection = (currentPlayer.Character.HumanoidRootPart.Position - player.Character.HumanoidRootPart.Position).unit
+
+				local angle = math.acos(playerLookDirection:Dot(toPlayerDirection))
+
+				angle = math.deg(angle)
+
+				if distance < closestDistance and distance > minDistance and angle <= 80 then
+					closestDistance = distance
+					closestPlayer = currentPlayer
+				end
+			end
+		end
+	end
+	
+	return closestPlayer
+end
+
+
+-- OUTDATED
+
+--[[RunService.Heartbeat:Connect(function()
+	if Settings.AIM_ASSIST.ENABLED then
+		local nearestPlayer = getNearestPlayer()
+		if nearestPlayer then
+			local targetPosition = nearestPlayer.Character.HumanoidRootPart.Position
+			local camera = workspace.CurrentCamera
+			camera.CFrame = CFrame.new(camera.CFrame.Position, targetPosition)
+			--local character = player.Character-- The player's character
+
+		end
+	end
+end)--]]
+
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+
+local camera = workspace.CurrentCamera
+local smoothFactor = 0.1
+
+RunService.Heartbeat:Connect(function()
+	if Settings.AIM_ASSIST.ENABLED then
+		local nearestPlayer = getNearestPlayer()
+		if nearestPlayer and nearestPlayer.Character and nearestPlayer.Character:FindFirstChild("HumanoidRootPart") then
+			local targetPosition = nearestPlayer.Character.HumanoidRootPart.Position
+
+			-- Smoothly transition to the target
+			local newCFrame = CFrame.new(camera.CFrame.Position, targetPosition)
+			camera.CFrame = camera.CFrame:Lerp(newCFrame, smoothFactor) 
+		end
+	end
+end)
+
+
 
 local function toggleMetalESP()
 	if Settings.METAL_ESP.ENABLED then
@@ -289,6 +962,15 @@ local function toggleStarESP()
 	end
 end
 
+local function toggleBeeESP()
+	if Settings.BEE_ESP.ENABLED then
+		Settings.BEE_ESP.ENABLED = false
+	else
+		Settings.BEE_ESP.ENABLED = true
+	end
+end
+
+
 local function toggleBeamType(beamType, visibility)
 	if Beams[beamType] then
 		for i, v in ipairs(Beams[beamType]) do
@@ -298,9 +980,51 @@ local function toggleBeamType(beamType, visibility)
 	end
 end
 
--- create beam
 
-local function createBeam(target, highlight, beamType, color, visibility)
+-- ADD HIGHLIGHT
+
+local function addHighlight(target, highlightType, visibility)
+	if not target:FindFirstChildOfClass("Highlight") then
+
+		--[[for i, v in pairs(target:GetChildren()) do
+			if v:IsA("Part") or v:IsA("Mesh") then
+				v.Transparency = 0
+			end
+		end--]]
+
+		local highlight = Instance.new("Highlight", target)
+
+		highlight.Adornee = target
+		highlight.Enabled = visibility
+		highlight.FillTransparency = 0.8
+		highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+		highlight.FillColor = Color3.fromRGB(255,0,0)
+		highlight.DepthMode = "Occluded"
+		
+		if highlightType then
+			if Highlights[highlightType] then
+				table.insert(Highlights[highlightType], highlight)
+			else
+				Highlights[highlightType] = {}
+				table.insert(Highlights[highlightType], highlight)
+			end
+		end
+	end
+end
+
+-- TOGGLE HIGHLIGHT
+
+local function toggleHighlights(highlightType, visibility)
+	if Highlights[highlightType] then
+		for i, v in ipairs(Highlights[highlightType]) do
+			v.Enabled = visibility
+		end
+	end
+end
+
+-- ADD BEAM
+
+local function createBeam(target, beamType, color, visibility)
 
 	if not (target.PrimaryPart and player.Character and player.Character.PrimaryPart) then
 		return
@@ -323,9 +1047,9 @@ local function createBeam(target, highlight, beamType, color, visibility)
 	end
 
 	if color ~= nil then 
-		beam.Color =  ColorSequence.new(color)
+		beam.Color = ColorSequence.new(color)
 	else
-		ColorSequence.new(Color3.fromRGB(255, 0, 0))
+		beam.Color = ColorSequence.new(Color3.fromRGB(255, 0, 0))
 	end
 
 	beam.Texture = "http://www.roblox.com/asset/?id=4955566540"
@@ -343,45 +1067,157 @@ local function createBeam(target, highlight, beamType, color, visibility)
 	end
 
 
-	if highlight and (not target:FindFirstChild("highlightPart")) then
-		
-		local part = Instance.new("Part", target)
-		
-		for i, v in pairs(part:GetChildren()) do
-			if v:IsA("Part") or v:IsA("Mesh") then
-				v.Transparency = 1
-			end
-		end
-		part.Name = "highlightPart"
-		part.Transparency = 0
-		part.CanCollide = false
-		part.Anchored = true
-		
-		if part:IsA("Modell") then
-			part.PrimaryPart.Position = target.PrimaryPart.Position
-		else
-			part.Position = target.PrimaryPart.Position
-		end
-		
-		local highlight = Instance.new("Highlight", part)
-		highlight.Enabled = true
-		highlight.FillColor = Color3.fromRGB(255,0,0)
-		
-	end
 end
 
+-- DISTANCE TRACKER
+
+local function addDistanceTracker(target, trackerType, visibility)
+	local DistanceTracker = Instance.new("BillboardGui", target)
+	local DistanceTrackerMainFrame = Instance.new("Frame", DistanceTracker)
+	local DistanceTrackerText = Instance.new("TextLabel", DistanceTrackerMainFrame)
+	
+	if target:IsA("Model") then
+		DistanceTracker.Adornee = target.PrimaryPart
+	else
+		DistanceTracker.Adornee = target
+	end
+	
+	DistanceTracker.Active = true
+	DistanceTracker.Enabled = visibility
+	DistanceTracker.AlwaysOnTop = true
+	DistanceTracker.ClipsDescendants = true
+	DistanceTracker.LightInfluence = 1
+	DistanceTracker.Size = UDim2.new(0, 50, 0, 25)
+	DistanceTracker.StudsOffsetWorldSpace = Vector3.new(0, 1, 0)
+	DistanceTracker.ResetOnSpawn = false
+	DistanceTracker.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	DistanceTracker.Name = "DistanceTracker"
+	
+	DistanceTrackerMainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	DistanceTrackerMainFrame.BackgroundTransparency = 1
+	DistanceTrackerMainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	DistanceTrackerMainFrame.BorderSizePixel = 0
+	DistanceTrackerMainFrame.Size = UDim2.new(1, 0, 1, 0)
+	DistanceTrackerMainFrame.Name = "Main"
+	
+	DistanceTrackerText.Font = Enum.Font.SourceSans
+	DistanceTrackerText.RichText = true
+	DistanceTrackerText.Text = "50m"
+	DistanceTrackerText.TextColor3 = Color3.fromRGB(255, 255, 255)
+	DistanceTrackerText.TextScaled = true
+	DistanceTrackerText.TextSize = 4
+	DistanceTrackerText.TextStrokeTransparency = 0
+	DistanceTrackerText.TextWrapped = true
+	DistanceTrackerText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	DistanceTrackerText.BackgroundTransparency = 1
+	DistanceTrackerText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+	DistanceTrackerText.BorderSizePixel = 0
+	DistanceTrackerText.Size = UDim2.new(1, 0, 1, 0)
+	DistanceTrackerText.Name = "Distance"
+	
+	if not Trackers[trackerType] then
+		Trackers[trackerType] = {}
+	end
+	table.insert(Trackers[trackerType], DistanceTracker)
+	
+	local connection
+	connection = RunService.Heartbeat:Connect(function()
+		if not target or not target.Parent then 
+			DistanceTracker:Destroy()
+			if connection then connection:Disconnect() end
+			return
+		end
+		
+		if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			local playerPosition = player.Character.HumanoidRootPart.Position
+			
+			local targetPosition
+			
+			if target:IsA("Model") then
+				targetPosition = target.PrimaryPart.Position
+			else
+				targetPosition = target.Position
+			end
+			
+			local distance = (playerPosition - targetPosition).Magnitude
+			DistanceTrackerText.Text = string.format("%.1f m", distance)
+		end
+	end)
+	
+end
+
+local function toggleDistanceTracker(trackerType, visbility)
+	if Trackers[trackerType] then
+		for i, v in ipairs(Trackers[trackerType]) do
+			v.Enabled = visbility
+		end
+	end
+end
 
 -- METAL ESP
 
 CollectionService:GetInstanceAddedSignal("hidden-metal"):Connect(function(loot)
-	createBeam(loot, true, "metal-loot", nil, Settings.METAL_ESP.ENABLED)
+	createBeam(loot, "metal-loot", Settings.METAL_ESP.COLOR, Settings.METAL_ESP.ENABLED)
+	addHighlight(loot, 'metal-loot', Settings.METAL_ESP.ENABLED)
+	addDistanceTracker(loot, "metal-loot", (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.SHOW_DISTANCE))
 end)
 
 
 local function GetMetalLoot()
 	for _, loot in ipairs(CollectionService:GetTagged("hidden-metal")) do
-		task.wait(.1)
-		createBeam(loot, true, "metal-loot", nil, Settings.METAL_ESP.ENABLED)
+		task.wait(.5)
+		createBeam(loot, "metal-loot", Settings.METAL_ESP.COLOR, Settings.METAL_ESP.ENABLED)
+		addHighlight(loot, 'metal-loot', Settings.METAL_ESP.ENABLED)
+		addDistanceTracker(loot, "metal-loot", (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.SHOW_DISTANCE))
+	end
+end
+
+-- STAR ESP
+
+local function GetStars()
+	for i, child in ipairs(game.Workspace:GetChildren()) do
+		if Players:GetPlayerFromCharacter(child) then continue end
+		if child:IsA("Model") and child.Name:find("Star") then
+			if child['RootPart'] then
+				child['RootPart'].Transparency = 1
+			end
+			task.wait(0.1) -- Wait to ensure it's loaded
+			createBeam(child, "star", nil, Settings.STAR_ESP.ENABLED)
+			addHighlight(child, 'star', Settings.STAR_ESP.ENABLED)
+			addDistanceTracker(child, "star", (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.SHOW_DISTANCE))
+		end
+	end
+end
+
+game.Workspace.ChildAdded:Connect(function(child)
+	if Players:GetPlayerFromCharacter(child) then return end
+	if child:IsA("Model") and child.Name:find("Star") then
+		if child['RootPart'] then
+			child['RootPart'].Transparency = 1
+		end
+		task.wait(0.1) -- Wait to ensure it's loaded
+		createBeam(child, "star", nil, Settings.STAR_ESP.ENABLED)
+		addHighlight(child, 'star', Settings.STAR_ESP.ENABLED)
+		addDistanceTracker(child, "star", (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.SHOW_DISTANCE))
+	end
+end)
+
+-- BEE ESP
+
+CollectionService:GetInstanceAddedSignal("bee"):Connect(function(bee)
+	task.wait(.2)
+	createBeam(bee, "bee", nil, Settings.BEE_ESP.ENABLED)
+	addHighlight(bee, 'bee', Settings.BEE_ESP.ENABLED)
+	addDistanceTracker(bee, "bee", (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
+end)
+
+local function GetBees()
+	for _, bee in ipairs(CollectionService:GetTagged("bee")) do
+		task.wait(.5)
+		createBeam(bee, "bee", nil, Settings.BEE_ESP.ENABLED)
+		addHighlight(bee, 'bee', Settings.BEE_ESP.ENABLED)
+		addDistanceTracker(bee, "bee", (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
+		print((Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
 	end
 end
 
@@ -398,55 +1234,117 @@ end
 
 -- Module Toggle Functions
 
+local function toggleAimAssist()
+	if Settings.AIM_ASSIST.ENABLED then
+		Settings.AIM_ASSIST.ENABLED = false
+		TweenUI(AimAssistToggleButton, .05, Color3.fromRGB(20, 20, 20))
+	else
+		Settings.AIM_ASSIST.ENABLED = true
+		TweenUI(AimAssistToggleButton, .05, Color3.fromRGB(0, 255, 0))
+	end
+end
+
 local function OnMetalESPToggleButtonClick()
 	toggleMetalESP()
 	if Settings.METAL_ESP.ENABLED == true then
-		toggleBeamType("metal-loot", true)
 		TweenUI(MetalESPToggleButton, .05, Color3.fromRGB(0, 255, 0))
 	else
-		toggleBeamType("metal-loot", false)
 		TweenUI(MetalESPToggleButton, .05, Color3.fromRGB(20, 20, 20))
 	end
+	toggleBeamType("metal-loot", Settings.METAL_ESP.ENABLED)
+	toggleHighlights('metal-loot', (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.HIGHLIGHT))
+	toggleDistanceTracker('metal-loot', (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.SHOW_DISTANCE))
 end
 
 local function OnStarESPToggleButtonClick()
 	toggleStarESP()
 
 	if Settings.STAR_ESP.ENABLED == true then
-		toggleBeamType("star", true)
 		TweenUI(StarESPToggleButton, .05, Color3.fromRGB(0, 255, 0))
 	else
-		toggleBeamType("star", false)
 		TweenUI(StarESPToggleButton, .05, Color3.fromRGB(20, 20, 20))
 	end
+	toggleBeamType("star", Settings.STAR_ESP.ENABLED)
+	toggleHighlights('star', (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.HIGHLIGHT))
+	toggleDistanceTracker('star', (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.SHOW_DISTANCE))
 end
+
+local function OnBeeESPToggleButtonClick()
+	toggleBeeESP()
+
+	if Settings.BEE_ESP.ENABLED == true then
+		TweenUI(BeeESPToggleButton, .05, Color3.fromRGB(0, 255, 0))
+	else
+		TweenUI(BeeESPToggleButton, .05, Color3.fromRGB(20, 20, 20))
+	end
+	toggleBeamType("bee", Settings.BEE_ESP.ENABLED)
+	toggleHighlights('bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.HIGHLIGHT))
+	toggleDistanceTracker('bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
+end
+
+local function OnAimAssistToggleButtonClick()
+	toggleAimAssist()
+end
+
 
 
 local function OnModuleButtonPressed(button)
-	local exists = button.Parent.Parent.Parent:FindFirstChild("ModuleSettings_"..button.Parent.Name)
 	
-	if exists then
-		exists:Destroy()
+	local Settings = button.Parent:FindFirstChild("Settings") or button.Parent:WaitForChild("Settings")
+	if Settings.Visible == true then
+		Settings.Visible = false
+		button.Rotation = 0
 	else
-		local clone = ModuleSettingsFrame:Clone()
-		clone.Parent = button.Parent.Parent
-		clone.Name = "ModuleSettings_"..button.Name
-		clone.LayoutOrder = button.LayoutOrder + 1
-		clone.Visible = true
+		Settings.Visible = true
+		button.Rotation = 180
 	end
 	
 end
 
-local function InitializeAllModuleSettingsButtons()
-	for i, button in pairs(Main:GetDescendants()) do
-		if button:IsA("ImageButton") and button.Name == "ToggleModuleSettings" then
-			
+local function toggleModule(moduleType, module, button)
+	Settings[moduleType][module] = not Settings[moduleType][module]
+	
+	if module == "SHOW_DISTANCE" then
+		toggleDistanceTracker(Settings[moduleType]['CATEGORY'], (Settings[moduleType].ENABLED and Settings[moduleType][module]))
+	end
+	if module == "HIGHLIGHT" then
+		toggleHighlights(Settings[moduleType]['CATEGORY'], (Settings[moduleType].ENABLED and Settings[moduleType][module]))
+	end
+	
+	if button then
+		if Settings[moduleType][module] then
+			TweenUI(button, .1, Color3.fromRGB(0,255,0))
+		else
+			TweenUI(button, .1, Color3.fromRGB(20,20,20))
+		end
+	end
+end
+
+local function InitializeAllModuleSettingsButtons()	
+	for i, button in pairs(ModuleVisuals:GetDescendants()) do
+		if button.Name == "ToggleModuleSettings" then
 			button.MouseButton1Click:Connect(function()
 				OnModuleButtonPressed(button)
 			end)
 		end
 	end
 end
+
+local function BindAllModules()
+	for i, v in ipairs(Modules:GetDescendants()) do
+		
+		if v:IsA("Frame") and v.Parent.Name == "Settings" then
+			
+			local moduleName = v:FindFirstChild("ModuleName").Value
+			local toggle = v:FindFirstChild("Toggle")
+			
+			toggle.MouseButton1Click:Connect(function()
+				toggleModule(v.Parent.Parent.Name, moduleName, toggle)
+			end)
+		end
+	end
+end
+
 
 UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 	if gameProcessedEvent then return end
@@ -459,15 +1357,27 @@ UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 			blur.Enabled = false
 		end
 	end
+	if input.KeyCode == Enum.KeyCode.Q  then
+		toggleAimAssist()
+	end
 end)
 
 player.CharacterAdded:Connect(function()
 	task.wait(1)
-	GetMetalLoot()	
+	GetMetalLoot()
+	GetStars()	
+	GetBees()
 end)
+
+task.wait(.1)
 
 InitializeAllModuleSettingsButtons()
 GetMetalLoot()
+GetStars()
+GetBees()
+BindAllModules()
 
+AimAssistToggleButton.MouseButton1Click:Connect(OnAimAssistToggleButtonClick)
 MetalESPToggleButton.MouseButton1Click:Connect(OnMetalESPToggleButtonClick)
 StarESPToggleButton.MouseButton1Click:Connect(OnStarESPToggleButtonClick)
+BeeESPToggleButton.MouseButton1Click:Connect(OnBeeESPToggleButtonClick)
