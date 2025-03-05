@@ -991,7 +991,11 @@ local function addHighlight(target, highlightType, visibility)
 				v.Transparency = 0
 			end
 		end--]]
-
+		
+		if highlightType == "metal-loot" then
+			target:FindFirstChildOfClass("Part").Transparency = 0
+		end
+		
 		local highlight = Instance.new("Highlight", target)
 
 		highlight.Adornee = target
