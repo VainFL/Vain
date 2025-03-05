@@ -2,6 +2,10 @@
 
 -- Instances:
 
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+
+-- Instances:
+
 local Converted = {
 	["_VainUI"] = Instance.new("ScreenGui");
 	["_Main"] = Instance.new("Frame");
@@ -82,24 +86,46 @@ local Converted = {
 	["_UIListLayout9"] = Instance.new("UIListLayout");
 	["_ModuleName5"] = Instance.new("StringValue");
 	["_UIListLayout10"] = Instance.new("UIListLayout");
+	["_ORB_ESP"] = Instance.new("Frame");
 	["_UICorner23"] = Instance.new("UICorner");
-	["_Header"] = Instance.new("Frame");
+	["_Toggle9"] = Instance.new("TextButton");
 	["_UICorner24"] = Instance.new("UICorner");
-	["_nn"] = Instance.new("TextLabel");
+	["_ToggleModuleSettings3"] = Instance.new("ImageButton");
+	["_Settings3"] = Instance.new("Frame");
+	["_UICorner25"] = Instance.new("UICorner");
+	["_DistanceTrackerEnabled3"] = Instance.new("Frame");
+	["_UICorner26"] = Instance.new("UICorner");
+	["_Name6"] = Instance.new("TextLabel");
+	["_Toggle10"] = Instance.new("TextButton");
+	["_UICorner27"] = Instance.new("UICorner");
 	["_UIListLayout11"] = Instance.new("UIListLayout");
+	["_ModuleName6"] = Instance.new("StringValue");
+	["_HighlightEnabled3"] = Instance.new("Frame");
+	["_UICorner28"] = Instance.new("UICorner");
+	["_Name7"] = Instance.new("TextLabel");
+	["_Toggle11"] = Instance.new("TextButton");
+	["_UICorner29"] = Instance.new("UICorner");
+	["_UIListLayout12"] = Instance.new("UIListLayout");
+	["_ModuleName7"] = Instance.new("StringValue");
+	["_UIListLayout13"] = Instance.new("UIListLayout");
+	["_UICorner30"] = Instance.new("UICorner");
+	["_Header"] = Instance.new("Frame");
+	["_UICorner31"] = Instance.new("UICorner");
+	["_nn"] = Instance.new("TextLabel");
+	["_UIListLayout14"] = Instance.new("UIListLayout");
 	["_name"] = Instance.new("TextLabel");
 	["_Combat"] = Instance.new("Frame");
 	["_Main2"] = Instance.new("ScrollingFrame");
-	["_UIListLayout12"] = Instance.new("UIListLayout");
+	["_UIListLayout15"] = Instance.new("UIListLayout");
 	["_AimAssist"] = Instance.new("Frame");
-	["_UICorner25"] = Instance.new("UICorner");
-	["_Toggle9"] = Instance.new("TextButton");
-	["_UICorner26"] = Instance.new("UICorner");
-	["_UICorner27"] = Instance.new("UICorner");
+	["_UICorner32"] = Instance.new("UICorner");
+	["_Toggle12"] = Instance.new("TextButton");
+	["_UICorner33"] = Instance.new("UICorner");
+	["_UICorner34"] = Instance.new("UICorner");
 	["_Header1"] = Instance.new("Frame");
-	["_UICorner28"] = Instance.new("UICorner");
+	["_UICorner35"] = Instance.new("UICorner");
 	["_nn1"] = Instance.new("TextLabel");
-	["_UIListLayout13"] = Instance.new("UIListLayout");
+	["_UIListLayout16"] = Instance.new("UIListLayout");
 	["_name1"] = Instance.new("TextLabel");
 }
 
@@ -651,7 +677,160 @@ Converted["_ModuleName5"].Parent = Converted["_HighlightEnabled2"]
 Converted["_UIListLayout10"].SortOrder = Enum.SortOrder.LayoutOrder
 Converted["_UIListLayout10"].Parent = Converted["_Settings2"]
 
-Converted["_UICorner23"].Parent = Converted["_Visuals1"]
+Converted["_ORB_ESP"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_ORB_ESP"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_ORB_ESP"].BackgroundTransparency = 1
+Converted["_ORB_ESP"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ORB_ESP"].BorderSizePixel = 0
+Converted["_ORB_ESP"].LayoutOrder = 1
+Converted["_ORB_ESP"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
+Converted["_ORB_ESP"].Name = "ORB_ESP"
+Converted["_ORB_ESP"].Parent = Converted["_Main1"]
+
+Converted["_UICorner23"].Parent = Converted["_ORB_ESP"]
+
+Converted["_Toggle9"].Font = Enum.Font.Arial
+Converted["_Toggle9"].Text = "Orb ESP"
+Converted["_Toggle9"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle9"].TextSize = 14
+Converted["_Toggle9"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_Toggle9"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle9"].BorderSizePixel = 0
+Converted["_Toggle9"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Toggle9"].Name = "Toggle"
+Converted["_Toggle9"].Parent = Converted["_ORB_ESP"]
+
+Converted["_UICorner24"].Parent = Converted["_Toggle9"]
+
+Converted["_ToggleModuleSettings3"].Image = "http://www.roblox.com/asset/?id=138007024966757"
+--Converted["_ToggleModuleSettings3"].ImageContent = Content
+Converted["_ToggleModuleSettings3"].ScaleType = Enum.ScaleType.Fit
+Converted["_ToggleModuleSettings3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ToggleModuleSettings3"].BackgroundTransparency = 1
+Converted["_ToggleModuleSettings3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ToggleModuleSettings3"].BorderSizePixel = 0
+Converted["_ToggleModuleSettings3"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_ToggleModuleSettings3"].Size = UDim2.new(0.200000003, 0, 1, 0)
+Converted["_ToggleModuleSettings3"].Name = "ToggleModuleSettings"
+Converted["_ToggleModuleSettings3"].Parent = Converted["_ORB_ESP"]
+
+Converted["_Settings3"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_Settings3"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_Settings3"].BackgroundTransparency = 0.5
+Converted["_Settings3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Settings3"].BorderSizePixel = 0
+Converted["_Settings3"].Position = UDim2.new(0, 0, 1, 0)
+Converted["_Settings3"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Settings3"].Visible = false
+Converted["_Settings3"].Name = "Settings"
+Converted["_Settings3"].Parent = Converted["_ORB_ESP"]
+
+Converted["_UICorner25"].Parent = Converted["_Settings3"]
+
+Converted["_DistanceTrackerEnabled3"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_DistanceTrackerEnabled3"].BackgroundTransparency = 0.5
+Converted["_DistanceTrackerEnabled3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_DistanceTrackerEnabled3"].BorderSizePixel = 0
+Converted["_DistanceTrackerEnabled3"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_DistanceTrackerEnabled3"].Name = "DistanceTrackerEnabled"
+Converted["_DistanceTrackerEnabled3"].Parent = Converted["_Settings3"]
+
+Converted["_UICorner26"].Parent = Converted["_DistanceTrackerEnabled3"]
+
+Converted["_Name6"].Font = Enum.Font.SourceSans
+Converted["_Name6"].Text = "Show Distance"
+Converted["_Name6"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name6"].TextSize = 14
+Converted["_Name6"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name6"].BackgroundTransparency = 1
+Converted["_Name6"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name6"].BorderSizePixel = 0
+Converted["_Name6"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name6"].Name = "Name"
+Converted["_Name6"].Parent = Converted["_DistanceTrackerEnabled3"]
+
+Converted["_Toggle10"].Font = Enum.Font.SourceSans
+Converted["_Toggle10"].RichText = true
+Converted["_Toggle10"].Text = ""
+Converted["_Toggle10"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle10"].TextScaled = true
+Converted["_Toggle10"].TextSize = 14
+Converted["_Toggle10"].TextWrapped = true
+Converted["_Toggle10"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle10"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle10"].BorderSizePixel = 0
+Converted["_Toggle10"].LayoutOrder = 1
+Converted["_Toggle10"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle10"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle10"].Name = "Toggle"
+Converted["_Toggle10"].Parent = Converted["_DistanceTrackerEnabled3"]
+
+Converted["_UICorner27"].Parent = Converted["_Toggle10"]
+
+Converted["_UIListLayout11"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout11"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout11"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout11"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout11"].Parent = Converted["_DistanceTrackerEnabled3"]
+
+Converted["_ModuleName6"].Value = "SHOW_DISTANCE"
+Converted["_ModuleName6"].Name = "ModuleName"
+Converted["_ModuleName6"].Parent = Converted["_DistanceTrackerEnabled3"]
+
+Converted["_HighlightEnabled3"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
+Converted["_HighlightEnabled3"].BackgroundTransparency = 0.5
+Converted["_HighlightEnabled3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_HighlightEnabled3"].BorderSizePixel = 0
+Converted["_HighlightEnabled3"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_HighlightEnabled3"].Name = "HighlightEnabled"
+Converted["_HighlightEnabled3"].Parent = Converted["_Settings3"]
+
+Converted["_UICorner28"].Parent = Converted["_HighlightEnabled3"]
+
+Converted["_Name7"].Font = Enum.Font.SourceSans
+Converted["_Name7"].Text = "Highlight Target"
+Converted["_Name7"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name7"].TextSize = 14
+Converted["_Name7"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Name7"].BackgroundTransparency = 1
+Converted["_Name7"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Name7"].BorderSizePixel = 0
+Converted["_Name7"].Size = UDim2.new(0.800000012, 0, 1, 0)
+Converted["_Name7"].Name = "Name"
+Converted["_Name7"].Parent = Converted["_HighlightEnabled3"]
+
+Converted["_Toggle11"].Font = Enum.Font.SourceSans
+Converted["_Toggle11"].RichText = true
+Converted["_Toggle11"].Text = ""
+Converted["_Toggle11"].TextColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle11"].TextScaled = true
+Converted["_Toggle11"].TextSize = 14
+Converted["_Toggle11"].TextWrapped = true
+Converted["_Toggle11"].BackgroundColor3 = Color3.fromRGB(30.00000011175871, 30.00000011175871, 30.00000011175871)
+Converted["_Toggle11"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle11"].BorderSizePixel = 0
+Converted["_Toggle11"].LayoutOrder = 1
+Converted["_Toggle11"].Position = UDim2.new(0.800000012, 0, 0, 0)
+Converted["_Toggle11"].Size = UDim2.new(0.200000003, 0, 0.899999976, 0)
+Converted["_Toggle11"].Name = "Toggle"
+Converted["_Toggle11"].Parent = Converted["_HighlightEnabled3"]
+
+Converted["_UICorner29"].Parent = Converted["_Toggle11"]
+
+Converted["_UIListLayout12"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout12"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout12"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout12"].VerticalAlignment = Enum.VerticalAlignment.Center
+Converted["_UIListLayout12"].Parent = Converted["_HighlightEnabled3"]
+
+Converted["_ModuleName7"].Value = "HIGHLIGHT"
+Converted["_ModuleName7"].Name = "ModuleName"
+Converted["_ModuleName7"].Parent = Converted["_HighlightEnabled3"]
+
+Converted["_UIListLayout13"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout13"].Parent = Converted["_Settings3"]
+
+Converted["_UICorner30"].Parent = Converted["_Visuals1"]
 
 Converted["_Header"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
 Converted["_Header"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -660,7 +839,7 @@ Converted["_Header"].Size = UDim2.new(1.00000012, 0, 0.0584502965, 0)
 Converted["_Header"].Name = "Header"
 Converted["_Header"].Parent = Converted["_Visuals1"]
 
-Converted["_UICorner24"].Parent = Converted["_Header"]
+Converted["_UICorner31"].Parent = Converted["_Header"]
 
 Converted["_nn"].Font = Enum.Font.SourceSans
 Converted["_nn"].Text = ""
@@ -674,8 +853,8 @@ Converted["_nn"].Size = UDim2.new(1, 0, 0.100000001, 0)
 Converted["_nn"].Name = "nn"
 Converted["_nn"].Parent = Converted["_Header"]
 
-Converted["_UIListLayout11"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout11"].Parent = Converted["_Header"]
+Converted["_UIListLayout14"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout14"].Parent = Converted["_Header"]
 
 Converted["_name"].Font = Enum.Font.SourceSans
 Converted["_name"].Text = "VISUALS"
@@ -712,10 +891,10 @@ Converted["_Main2"].Size = UDim2.new(0.87843138, 0, 0.894003451, 0)
 Converted["_Main2"].Name = "Main"
 Converted["_Main2"].Parent = Converted["_Combat"]
 
-Converted["_UIListLayout12"].Padding = UDim.new(0, 5)
-Converted["_UIListLayout12"].HorizontalAlignment = Enum.HorizontalAlignment.Center
-Converted["_UIListLayout12"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout12"].Parent = Converted["_Main2"]
+Converted["_UIListLayout15"].Padding = UDim.new(0, 5)
+Converted["_UIListLayout15"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout15"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout15"].Parent = Converted["_Main2"]
 
 Converted["_AimAssist"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
 Converted["_AimAssist"].BackgroundTransparency = 1
@@ -726,22 +905,22 @@ Converted["_AimAssist"].Size = UDim2.new(0.899999976, 0, 0.0399999991, 0)
 Converted["_AimAssist"].Name = "AimAssist"
 Converted["_AimAssist"].Parent = Converted["_Main2"]
 
-Converted["_UICorner25"].Parent = Converted["_AimAssist"]
+Converted["_UICorner32"].Parent = Converted["_AimAssist"]
 
-Converted["_Toggle9"].Font = Enum.Font.Arial
-Converted["_Toggle9"].Text = "AimAssist"
-Converted["_Toggle9"].TextColor3 = Color3.fromRGB(255, 255, 255)
-Converted["_Toggle9"].TextSize = 14
-Converted["_Toggle9"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
-Converted["_Toggle9"].BorderColor3 = Color3.fromRGB(0, 0, 0)
-Converted["_Toggle9"].BorderSizePixel = 0
-Converted["_Toggle9"].Size = UDim2.new(1, 0, 1, 0)
-Converted["_Toggle9"].Name = "Toggle"
-Converted["_Toggle9"].Parent = Converted["_AimAssist"]
+Converted["_Toggle12"].Font = Enum.Font.Arial
+Converted["_Toggle12"].Text = "AimAssist"
+Converted["_Toggle12"].TextColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Toggle12"].TextSize = 14
+Converted["_Toggle12"].BackgroundColor3 = Color3.fromRGB(20.000000707805157, 20.000000707805157, 20.000000707805157)
+Converted["_Toggle12"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Toggle12"].BorderSizePixel = 0
+Converted["_Toggle12"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Toggle12"].Name = "Toggle"
+Converted["_Toggle12"].Parent = Converted["_AimAssist"]
 
-Converted["_UICorner26"].Parent = Converted["_Toggle9"]
+Converted["_UICorner33"].Parent = Converted["_Toggle12"]
 
-Converted["_UICorner27"].Parent = Converted["_Combat"]
+Converted["_UICorner34"].Parent = Converted["_Combat"]
 
 Converted["_Header1"].BackgroundColor3 = Color3.fromRGB(10.000000353902578, 10.000000353902578, 10.000000353902578)
 Converted["_Header1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -750,7 +929,7 @@ Converted["_Header1"].Size = UDim2.new(1.00000012, 0, 0.0584502965, 0)
 Converted["_Header1"].Name = "Header"
 Converted["_Header1"].Parent = Converted["_Combat"]
 
-Converted["_UICorner28"].Parent = Converted["_Header1"]
+Converted["_UICorner35"].Parent = Converted["_Header1"]
 
 Converted["_nn1"].Font = Enum.Font.SourceSans
 Converted["_nn1"].Text = ""
@@ -764,8 +943,8 @@ Converted["_nn1"].Size = UDim2.new(1, 0, 0.100000001, 0)
 Converted["_nn1"].Name = "nn"
 Converted["_nn1"].Parent = Converted["_Header1"]
 
-Converted["_UIListLayout13"].SortOrder = Enum.SortOrder.LayoutOrder
-Converted["_UIListLayout13"].Parent = Converted["_Header1"]
+Converted["_UIListLayout16"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout16"].Parent = Converted["_Header1"]
 
 Converted["_name1"].Font = Enum.Font.SourceSans
 Converted["_name1"].Text = "COMBAT"
@@ -819,6 +998,11 @@ local BeeESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("BEE_ESP")
 local BeeESPToggleButton = BeeESPFrame:WaitForChild("Toggle")
 local ToggleBeeESPModuleSettingsButton = BeeESPFrame:WaitForChild("ToggleModuleSettings")
 
+
+local OrbESPFrame = ModuleVisuals:WaitForChild("Main"):WaitForChild("ORB_ESP")
+local OrbESPToggleButton = OrbESPFrame:WaitForChild("Toggle")
+local ToggleOrbESPModuleSettingsButton = OrbESPFrame:WaitForChild("ToggleModuleSettings")
+
 local AimAssistFrame =  ModuleCombat:WaitForChild("Main"):WaitForChild("AimAssist")
 local AimAssistToggleButton = AimAssistFrame:WaitForChild("Toggle")
 
@@ -858,6 +1042,13 @@ Settings = {
 		SHOW_DISTANCE = false,
 		HIGHLIGHT = false,
 		CATEGORY = 'bee',
+	},
+	
+	ORB_ESP = {
+		ENABLED = false,
+		SHOW_DISTANCE = false,
+		HIGHLIGHT = false,
+		CATEGORY = 'treeOrb',
 	},
 	
 	AIM_ASSIST = {
@@ -967,6 +1158,14 @@ local function toggleBeeESP()
 		Settings.BEE_ESP.ENABLED = false
 	else
 		Settings.BEE_ESP.ENABLED = true
+	end
+end
+
+local function toggleOrbESP()
+	if Settings.ORB_ESP.ENABLED then
+		Settings.ORB_ESP.ENABLED = false
+	else
+		Settings.ORB_ESP.ENABLED = true
 	end
 end
 
@@ -1225,6 +1424,24 @@ local function GetBees()
 	end
 end
 
+-- ELDERTREE ORB ESP
+
+CollectionService:GetInstanceAddedSignal("treeOrb"):Connect(function(orb)
+	createBeam(orb, "treeOrb", Settings.ORB_ESP.COLOR, Settings.ORB_ESP.ENABLED)
+	addHighlight(orb, 'treeOrb', Settings.ORB_ESP.ENABLED)
+	addDistanceTracker(orb, "treeOrb", (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.SHOW_DISTANCE))
+end)
+
+
+local function GetOrbs()
+	for _, orb in ipairs(CollectionService:GetTagged("treeOrb")) do
+		task.wait(.5)
+		createBeam(orb, "treeOrb", Settings.ORB_ESP.COLOR, Settings.ORB_ESP.ENABLED)
+		addHighlight(orb, 'treeOrb', Settings.ORB_ESP.ENABLED)
+		addDistanceTracker(orb, "treeOrb", (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.SHOW_DISTANCE))
+	end
+end
+
 local function TweenUI(element, length, color)
 
 	local goal = {}
@@ -1284,6 +1501,19 @@ local function OnBeeESPToggleButtonClick()
 	toggleBeamType("bee", Settings.BEE_ESP.ENABLED)
 	toggleHighlights('bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.HIGHLIGHT))
 	toggleDistanceTracker('bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
+end
+
+local function OnOrbESPToggleButtonClick()
+	toggleOrbESP()
+
+	if Settings.ORB_ESP.ENABLED == true then
+		TweenUI(OrbESPToggleButton, .05, Color3.fromRGB(0, 255, 0))
+	else
+		TweenUI(OrbESPToggleButton, .05, Color3.fromRGB(20, 20, 20))
+	end
+	toggleBeamType("treeOrb", Settings.ORB_ESP.ENABLED)
+	toggleHighlights('treeOrb', (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.HIGHLIGHT))
+	toggleDistanceTracker('treeOrb', (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.SHOW_DISTANCE))
 end
 
 local function OnAimAssistToggleButtonClick()
@@ -1371,6 +1601,7 @@ player.CharacterAdded:Connect(function()
 	GetMetalLoot()
 	GetStars()	
 	GetBees()
+	GetOrbs()
 end)
 
 task.wait(.1)
@@ -1380,8 +1611,10 @@ GetMetalLoot()
 GetStars()
 GetBees()
 BindAllModules()
+GetOrbs()
 
 AimAssistToggleButton.MouseButton1Click:Connect(OnAimAssistToggleButtonClick)
 MetalESPToggleButton.MouseButton1Click:Connect(OnMetalESPToggleButtonClick)
 StarESPToggleButton.MouseButton1Click:Connect(OnStarESPToggleButtonClick)
 BeeESPToggleButton.MouseButton1Click:Connect(OnBeeESPToggleButtonClick)
+OrbESPToggleButton.MouseButton1Click:Connect(OnOrbESPToggleButtonClick)
