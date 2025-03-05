@@ -2,10 +2,6 @@
 
 -- Instances:
 
--- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
-
--- Instances:
-
 local Converted = {
 	["_VainUI"] = Instance.new("ScreenGui");
 	["_Main"] = Instance.new("Frame");
