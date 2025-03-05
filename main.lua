@@ -1361,16 +1361,16 @@ end
 
 CollectionService:GetInstanceAddedSignal("hidden-metal"):Connect(function(loot)
 	createBeam(loot, "metal-loot", Settings.METAL_ESP.COLOR, Settings.METAL_ESP.ENABLED)
-	addHighlight(loot, 'metal-loot', Settings.METAL_ESP.ENABLED)
+	addHighlight(loot, 'metal-loot', (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.HIGHLIGHT))
 	addDistanceTracker(loot, "metal-loot", (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.SHOW_DISTANCE))
 end)
 
 
 local function GetMetalLoot()
 	for _, loot in ipairs(CollectionService:GetTagged("hidden-metal")) do
-		task.wait(.5)
+		task.wait(.1)
 		createBeam(loot, "metal-loot", Settings.METAL_ESP.COLOR, Settings.METAL_ESP.ENABLED)
-		addHighlight(loot, 'metal-loot', Settings.METAL_ESP.ENABLED)
+		addHighlight(loot, 'metal-loot',(Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.HIGHLIGHT))
 		addDistanceTracker(loot, "metal-loot", (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.SHOW_DISTANCE))
 	end
 end
@@ -1386,7 +1386,7 @@ local function GetStars()
 			end
 			task.wait(0.1) -- Wait to ensure it's loaded
 			createBeam(child, "star", nil, Settings.STAR_ESP.ENABLED)
-			addHighlight(child, 'star', Settings.STAR_ESP.ENABLED)
+			addHighlight(child, 'star', (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.HIGHLIGHT))
 			addDistanceTracker(child, "star", (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.SHOW_DISTANCE))
 		end
 	end
@@ -1400,7 +1400,7 @@ game.Workspace.ChildAdded:Connect(function(child)
 		end
 		task.wait(0.1) -- Wait to ensure it's loaded
 		createBeam(child, "star", nil, Settings.STAR_ESP.ENABLED)
-		addHighlight(child, 'star', Settings.STAR_ESP.ENABLED)
+		addHighlight(child, 'star', (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.HIGHLIGHT))
 		addDistanceTracker(child, "star", (Settings.STAR_ESP.ENABLED and Settings.STAR_ESP.SHOW_DISTANCE))
 	end
 end)
@@ -1410,15 +1410,15 @@ end)
 CollectionService:GetInstanceAddedSignal("bee"):Connect(function(bee)
 	task.wait(.2)
 	createBeam(bee, "bee", nil, Settings.BEE_ESP.ENABLED)
-	addHighlight(bee, 'bee', Settings.BEE_ESP.ENABLED)
+	addHighlight(bee, 'bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.HIGHLIGHT))
 	addDistanceTracker(bee, "bee", (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
 end)
 
 local function GetBees()
 	for _, bee in ipairs(CollectionService:GetTagged("bee")) do
-		task.wait(.5)
+		task.wait(.1)
 		createBeam(bee, "bee", nil, Settings.BEE_ESP.ENABLED)
-		addHighlight(bee, 'bee', Settings.BEE_ESP.ENABLED)
+		addHighlight(bee, 'bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.HIGHLIGHT))
 		addDistanceTracker(bee, "bee", (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
 		print((Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.SHOW_DISTANCE))
 	end
@@ -1428,16 +1428,16 @@ end
 
 CollectionService:GetInstanceAddedSignal("treeOrb"):Connect(function(orb)
 	createBeam(orb, "treeOrb", Settings.ORB_ESP.COLOR, Settings.ORB_ESP.ENABLED)
-	addHighlight(orb, 'treeOrb', Settings.ORB_ESP.ENABLED)
+	addHighlight(orb, 'treeOrb', (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.HIGHLIGHT))
 	addDistanceTracker(orb, "treeOrb", (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.SHOW_DISTANCE))
 end)
 
 
 local function GetOrbs()
 	for _, orb in ipairs(CollectionService:GetTagged("treeOrb")) do
-		task.wait(.5)
+		task.wait(.1)
 		createBeam(orb, "treeOrb", Settings.ORB_ESP.COLOR, Settings.ORB_ESP.ENABLED)
-		addHighlight(orb, 'treeOrb', Settings.ORB_ESP.ENABLED)
+		addHighlight(orb, 'treeOrb', (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.HIGHLIGHT))
 		addDistanceTracker(orb, "treeOrb", (Settings.ORB_ESP.ENABLED and Settings.ORB_ESP.SHOW_DISTANCE))
 	end
 end
