@@ -1179,7 +1179,7 @@ end
 -- ADD HIGHLIGHT
 
 local function addHighlight(target, highlightType, visibility)
-	if not target:FindFirstChildOfClass("Highlight") then
+	if not target:FindFirstChild("xhighlight") then
 
 		--[[for i, v in pairs(target:GetChildren()) do
 			if v:IsA("Part") or v:IsA("Mesh") then
@@ -1188,11 +1188,14 @@ local function addHighlight(target, highlightType, visibility)
 		end--]]
 		
 		if highlightType == "metal-loot" then
-			target:FindFirstChildOfClass("Part").Transparency = 0
+			target:FindFirstChild("Part").Transparency = 0
+		elseif highlightType == "treeOrb" then
+			target:FindFirstChild("Spirit").Transparency = 0
 		end
 		
 		local highlight = Instance.new("Highlight", target)
-
+		
+		highlight.Name = "xhighlight"
 		highlight.Adornee = target
 		highlight.Enabled = visibility
 		highlight.FillTransparency = 0.8
@@ -1228,7 +1231,11 @@ local function createBeam(target, beamType, color, visibility)
 	if not (target.PrimaryPart and player.Character and player.Character.PrimaryPart) then
 		return
 	end
-
+	
+	if target.PrimaryPart:FindFirstChild("xbeam") then
+		target.PrimaryPart:FindFirstChild("xbeam"):Destroy()
+	end
+	
 	local attachmentLoot = Instance.new("Attachment")
 	attachmentLoot.Parent = target.PrimaryPart
 
@@ -1237,6 +1244,7 @@ local function createBeam(target, beamType, color, visibility)
 
 	-- 
 	local beam = Instance.new("Beam", target)
+	beam.Name = "xbeam"
 	beam.Attachment1 = attachmentLoot
 	beam.Attachment0 = attachmentPlayer
 	beam.Parent = target.PrimaryPart
@@ -1271,6 +1279,9 @@ end
 -- DISTANCE TRACKER
 
 local function addDistanceTracker(target, trackerType, visibility)
+	
+	if target:FindFirstChild("DistanceTracker") then return end
+	
 	local DistanceTracker = Instance.new("BillboardGui", target)
 	local DistanceTrackerMainFrame = Instance.new("Frame", DistanceTracker)
 	local DistanceTrackerText = Instance.new("TextLabel", DistanceTrackerMainFrame)
