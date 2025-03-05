@@ -8,6 +8,7 @@ local function delfile(file)
 end
 
 local function downloadFile(path, func)
+    delfile(path)
     if not isfile(path) then
         local success, content = pcall(function()
             return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/main/'..path, true)
