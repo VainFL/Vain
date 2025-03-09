@@ -1316,7 +1316,7 @@ local function addDistanceTracker(target, trackerType, visibility)
 	DistanceTrackerText.TextColor3 = Color3.fromRGB(255, 255, 255)
 	DistanceTrackerText.TextScaled = true
 	DistanceTrackerText.TextSize = 4
-	DistanceTrackerText.TextStrokeTransparency = 0
+	DistanceTrackerText.TextStrokeTransparency = 0.5
 	DistanceTrackerText.TextWrapped = true
 	DistanceTrackerText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	DistanceTrackerText.BackgroundTransparency = 1
