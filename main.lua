@@ -29,5 +29,25 @@ end
 -- Now we can load the GUI script
 local vain = loadstring(downloadFile('vain/scripts/gui.lua'), 'gui')()
 
+shared.vain = vain
 
+if not shared.VainIndependent  then
+	loadstring(downloadFile('vain/scripts/universal.lua'), 'universal')()
+	if isfile('vain/scripts/bedwars.lua') then
+		loadstring(readfile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
+	else
+		if not shared.VainDeveloper then
+			local suc, res = pcall(function()
+				return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/scripts/bedwars.lua', true)
+			end)
+			if suc and res ~= '404: Not Found' then
+				loadstring(downloadFile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
+			end
+		end
+	end
+	finishLoading()
+else
+	vain.Init = finishLoading
+	return vain
+end
 
