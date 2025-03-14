@@ -51,6 +51,6 @@ if not shared.VainIndependent  then
 	end
 	finishLoading()
 else
-	vain.Init = finishLoading
-	return vain
+	--vain.Init = finishLoading
+	--return vain
 end
