@@ -1285,7 +1285,9 @@ run(function()
 					
 					
 					oldnamecall = hookmetamethod(getrawmetatable(game), '__namecall', function(...)
-
+						
+						
+						
 						if getnamecallmethod() ~= Method.Value then --if getnamecallmethod() ~= Method.Value then
 							return oldnamecall(...)
 						end
