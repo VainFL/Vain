@@ -12,6 +12,7 @@ local function downloadFile(path, func)
             return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/'..select(1, path:gsub('vain/', '')), true)
         end)
         if not suc or res == '404: Not Found' then
+	    print('Failed to download: '..path)
             error(res)
         end
         if path:find('.lua') then
