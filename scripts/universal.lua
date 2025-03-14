@@ -1279,10 +1279,29 @@ run(function()
 						return oldray(unpack(args))
 					end)
 				else
-					oldnamecall = hookmetamethod(game, '__namecall', function(...)
-						--if getnamecallmethod() ~= Method.Value then --if getnamecallmethod() ~= Method.Value then
-							--return oldnamecall(...)
-						--end
+					local mt = getrawmetatable(game)
+					local oldnamecall = mt.__namecall
+					setreadonly(mt, false)
+
+					mt.__namecall = newcclosure(function(self, ...)
+						local method = getnamecallmethod()
+						if not method then
+							return oldnamecall(self, ...)
+						end
+						if method == Method.Value then
+							local args = {...}
+							local res = Hooks[Method.Value](args)
+							if res then
+								return unpack(res)
+							end
+						end
+						return oldnamecall(self, ...)
+					end)
+
+					setreadonly(mt, true)
+						if getnamecallmethod() ~= Method.Value then --if getnamecallmethod() ~= Method.Value then
+							return oldnamecall(...)
+						end
 						if checkcaller() then
 							return oldnamecall(...)
 						end
