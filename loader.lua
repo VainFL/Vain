@@ -40,7 +40,7 @@ for _, folder in {'vain', 'vain/scripts', 'vain/profiles', 'vain/assets', 'vain/
 	end
 end
 
-if not shared.vainDeveloper then
+if not shared.VainDeveloper then
 	local _, subbed = pcall(function() 
 		return game:HttpGet('https://github.com/VainFL/Vain') 
 	end)
