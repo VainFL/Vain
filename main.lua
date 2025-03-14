@@ -35,7 +35,7 @@ shared.vain = vain
 if not shared.VainIndependent  then
 	loadstring(downloadFile('vain/scripts/universal.lua'), 'universal')()
 	if isfile('vain/scripts/bedwars.lua') then
-		--loadstring(readfile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
+		loadstring(readfile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
 	else
 		if not shared.VainDeveloper then
 			local suc, res = pcall(function()
