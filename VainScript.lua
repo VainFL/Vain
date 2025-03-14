@@ -11,16 +11,17 @@ local function downloadFile(path, func)
     delfile(path)
     if not isfile(path) then
         local success, content = pcall(function()
-            return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/main/'..path, true)
+            return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/'..select(1, path:gsub('vain/', '')), true), true)
         end)
 
         if not success or content == '404: Not Found' then
             error('Failed to download: '..path)
         end
-
-        writefile(path, content)
+        if path:find('.lua') then
+			res = '--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.\n'..res
+		end
+		writefile(path, res)
     end
-
     return (func or readfile)(path)
 end
 
@@ -33,7 +34,7 @@ local function wipeFolder(path)
     end
 end
 
-for _, folder in {'scripts', 'profiles'} do
+for _, folder in {'vain', 'vain/scripts', 'vain/profiles', 'vain/assets'} do
     if not isfolder(folder) then
         makefolder(folder)
     end
@@ -48,10 +49,13 @@ if success then
     latest_commit = response:match('"sha"%s*:%s*"(%w+)"')
 end
 
-local current_commit = isfile('profiles/commit.txt') and readfile('profiles/commit.txt') or ''
+local current_commit = isfile('vain/profiles/commit.txt') and readfile('vain/profiles/commit.txt') or ''
 if latest_commit and latest_commit ~= current_commit then
-    wipeFolder('scripts')
-    writefile('profiles/commit.txt', latest_commit)
+    wipeFolder('vain')
+    wipeFolder('vain/profiles')
+    wipeFolder('vain/assets')
+    wipeFolder('vain/scripts')
 end
+ writefile('vain/profiles/commit.txt', latest_commit)
 
-return loadstring(downloadFile('main.lua'))()
+return loadstring(downloadFile('vain/main.lua'))()
