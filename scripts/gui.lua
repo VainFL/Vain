@@ -5567,7 +5567,7 @@ function mainapi:SaveOptions(object, savedoptions)
 	return savedoptions
 end
 
---[[function mainapi:Uninject()
+function mainapi:Uninject()
 	mainapi:Save()
 	mainapi.Loaded = nil
 	for _, v in self.Modules do
@@ -5602,7 +5602,7 @@ end
 	shared.vain = nil
 	shared.vainreload = nil
 	shared.vainIndependent = nil
-end--]]
+end
 
 gui = Instance.new('ScreenGui')
 gui.Name = randomString()
@@ -5849,7 +5849,7 @@ mainapi.MultiKeybind = general:CreateToggle({
 	Name = 'Enable Multi-Keybinding',
 	Tooltip = 'Allows multiple keys to be bound to a module (eg. G + H)'
 })
---[[general:CreateButton({
+general:CreateButton({
 	Name = 'Reset current profile',
 	Function = function()
 		mainapi.Save = function() end
@@ -5864,7 +5864,7 @@ mainapi.MultiKeybind = general:CreateToggle({
 		end
 	end,
 	Tooltip = 'This will set your profile to the default settings of vain'
-})--]]
+})
 general:CreateButton({
 	Name = 'Self destruct',
 	Function = function()
@@ -5872,7 +5872,7 @@ general:CreateButton({
 	end,
 	Tooltip = 'Removes vain from the current game'
 })
---[[general:CreateButton({
+general:CreateButton({
 	Name = 'Reinject',
 	Function = function()
 		shared.vainreload = true
@@ -5883,7 +5883,7 @@ general:CreateButton({
 		end
 	end,
 	Tooltip = 'Reloads vain for debugging purposes'
-})--]]
+})
 
 --[[
 	Module Settings
@@ -5977,7 +5977,7 @@ scaleslider = guipane:CreateSlider({
 	Darker = true,
 	Visible = false
 })
---[[guipane:CreateDropdown({
+guipane:CreateDropdown({
 	Name = 'GUI Theme',
 	List = inputService.TouchEnabled and {'new', 'old'} or {'new', 'old', 'rise'},
 	Function = function(val, mouse)
@@ -5992,7 +5992,7 @@ scaleslider = guipane:CreateSlider({
 		end
 	end,
 	Tooltip = 'new - The newest vain theme to since v4.05\nold - The vain theme pre v4.05\nrise - Rise 6.0'
-})--]]
+})
 mainapi.RainbowMode = guipane:CreateDropdown({
 	Name = 'Rainbow Mode',
 	List = {'Normal', 'Gradient', 'Retro'},
