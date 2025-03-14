@@ -29,7 +29,7 @@ end
 local function wipeFolder(path)
     if not isfolder(path) then return end
     for _, file in listfiles(path) do
-        if isfile(file) then
+        if isfile(file) and select(1, readfile(file):find('--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.')) == 1 then
             delfile(file)
         end
     end
