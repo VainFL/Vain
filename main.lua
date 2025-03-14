@@ -43,6 +43,9 @@ if not shared.VainIndependent  then
 			end)
 			if suc and res ~= '404: Not Found' then
 				loadstring(downloadFile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
+			else
+				print('Failed to download: '..path)
+            			error(res)
 			end
 		end
 	end
