@@ -28,7 +28,7 @@ end
 
 local function wipeFolder(path)
     if not isfolder(path) then return end
-    for _, file in getfiles(path) do
+    for _, file in listfiles(path) do
         if isfile(file) then
             delfile(file)
         end
