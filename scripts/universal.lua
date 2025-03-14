@@ -1283,7 +1283,7 @@ run(function()
 					
 					
 			
-					oldnamecall = hookfunction(game, '__namecall', function(...)
+					oldnamecall = hookmetamethod(game, '__namecall', function(...)
 						
 						
 						
@@ -1349,7 +1349,7 @@ run(function()
 				until not SilentAim.Enabled
 			else
 				if oldnamecall then
-					hookmetamethod(game, '__namecall', oldnamecall)
+					--hookmetamethod(game, '__namecall', oldnamecall)
 				end
 				if oldray then
 					hookfunction(Ray.new, oldray)
