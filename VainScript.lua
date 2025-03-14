@@ -8,7 +8,7 @@ local function delfile(file)
 end
 
 local function downloadFile(path, func)
-    delfile(path)
+    --delfile(path)
     if not isfile(path) then
         local success, res = pcall(function()
             return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/'..select(1, path:gsub('vain/', '')), true)
