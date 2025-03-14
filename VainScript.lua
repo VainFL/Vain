@@ -9,9 +9,10 @@ end
 
 local function downloadFile(path, func)
     delfile(path)
+    local res
     if not isfile(path) then
         local success, content = pcall(function()
-            return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/'..select(1, path:gsub('vain/', '')), true), true)
+            return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/'..select(1, path:gsub('vain/', '')), true)
         end)
 
         if not success or content == '404: Not Found' then
@@ -27,7 +28,7 @@ end
 
 local function wipeFolder(path)
     if not isfolder(path) then return end
-    for _, file in listfiles(path) do
+    for _, file in getfiles(path) do
         if isfile(file) then
             delfile(file)
         end
