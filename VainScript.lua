@@ -9,13 +9,12 @@ end
 
 local function downloadFile(path, func)
     delfile(path)
-    local res
     if not isfile(path) then
-        local success, content = pcall(function()
+        local success, res = pcall(function()
             return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/'..select(1, path:gsub('vain/', '')), true)
         end)
 
-        if not success or content == '404: Not Found' then
+        if not success or res == '404: Not Found' then
             error('Failed to download: '..path)
         end
         if path:find('.lua') then
