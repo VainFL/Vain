@@ -87,10 +87,10 @@ local lplr = playersService.LocalPlayer
 local assetfunction = getcustomasset
 
 local vain = shared.vain
-local tween = vain.tween
-local targetinfo = vain.targetinfo
-local getfontsize = vain.getfontsize
-local getcustomasset = vain.getcustomasset
+local tween = vain.Libraries.tween
+local targetinfo = vain.Libraries.targetinfo
+local getfontsize = vain.Libraries.getfontsize
+local getcustomasset = vain.Libraries.getcustomasset
 
 local TargetStrafeVector, SpiderShift, WaypointFolder
 local Spider = {Enabled = false}
@@ -266,11 +266,11 @@ local whitelist = {
 	localprio = 0,
 	said = {}
 }
-vain.entity = entitylib
-vain.whitelist = whitelist
-vain.prediction = prediction
-vain.hash = hash
-vain.auraanims = {
+vain.Libraries.entity = entitylib
+vain.Libraries.whitelist = whitelist
+vain.Libraries.prediction = prediction
+vain.Libraries.hash = hash
+vain.Libraries.auraanims = {
 	Normal = {
 		{CFrame = CFrame.new(-0.17, -0.14, -0.12) * CFrame.Angles(math.rad(-53), math.rad(50), math.rad(-64)), Time = 0.1},
 		{CFrame = CFrame.new(-0.55, -0.59, -0.1) * CFrame.Angles(math.rad(-161), math.rad(54), math.rad(-6)), Time = 0.08},
@@ -5514,25 +5514,25 @@ run(function()
 				SessionInfo:Clean(playersService.LocalPlayer.OnTeleport:Connect(function()
 					if not teleportedServers then
 						teleportedServers = true
-						queue_on_teleport("shared.vainsessioninfo = '"..httpService:JSONEncode(vain.sessioninfo.Objects).."'")
+						queue_on_teleport("shared.vainsessioninfo = '"..httpService:JSONEncode(vain.Libraries.sessioninfo.Objects).."'")
 					end
 				end))
 
 				if shared.vainsessioninfo then
 					for i, v in httpService:JSONDecode(shared.vainsessioninfo) do
-						if vain.sessioninfo.Objects[i] and v.Saved then
-							vain.sessioninfo.Objects[i].Value = v.Value
+						if vain.Libraries.sessioninfo.Objects[i] and v.Saved then
+							vain.Libraries.sessioninfo.Objects[i].Value = v.Value
 						end
 					end
 				end
 
 				repeat
-					if vain.sessioninfo then
+					if vain.Libraries.sessioninfo then
 						local stuff = {''}
 						if Title.Enabled then
 							stuff[1] = TitleOffset.Enabled and '<b>Session Info</b>\n<font size="4"> </font>' or '<b>Session Info</b>'
 						end
-						for i, v in vain.sessioninfo.Objects do
+						for i, v in vain.Libraries.sessioninfo.Objects do
 							stuff[v.Index] = i..': '..v.Function(v.Value)
 						end
 						if not Title.Enabled then
@@ -5631,7 +5631,7 @@ run(function()
 	infostroke.Color = Color3.fromHSV(0.44, 1, 1)
 	infostroke.Parent = infoholder
 	addBlur(infoholder)
-	vain.sessioninfo = {
+	vain.Libraries.sessioninfo = {
 		Objects = {},
 		AddItem = function(self, name, startvalue, func, saved)
 			func, saved = func or function(val) return val end, saved == nil or saved
@@ -5646,7 +5646,7 @@ run(function()
 			}
 		end
 	}
-	vain.sessioninfo:AddItem('Time Played', os.clock(), function(value)
+	vain.Libraries.sessioninfo:AddItem('Time Played', os.clock(), function(value)
 		return os.date('!%X', math.floor(os.clock() - value))
 	end)
 end)
