@@ -1280,9 +1280,9 @@ run(function()
 					end)
 				else
 					oldnamecall = hookmetamethod(game, '__namecall', function(...)
-						if getnamecallmethod() ~= Method.Value then
-							return oldnamecall(...)
-						end
+						--if getnamecallmethod() ~= Method.Value then --if getnamecallmethod() ~= Method.Value then
+							--return oldnamecall(...)
+						--end
 						if checkcaller() then
 							return oldnamecall(...)
 						end
