@@ -27,7 +27,7 @@ end
 -- Function to download and load the GUI script from GitHub
 
 -- Now we can load the GUI script
-local vain = loadstring(downloadFile('vain/scripts/gui.lua'))()
+local vain = loadstring(downloadFile('vain/scripts/gui.lua'), 'gui')()
 
 
 
