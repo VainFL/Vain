@@ -7,8 +7,8 @@ local inputService = cloneref(game:GetService('UserInputService'))
 
 local lplr = playersService.LocalPlayer
 local vain = shared.vain
-local entitylib = vain.libraries.entity
-local sessioninfo = vain.libraries.sessioninfo
+local entitylib = vain.Libraries.entity
+local sessioninfo = vain.Libraries.sessioninfo
 local bedwars = {}
 
 local function notif(...)
