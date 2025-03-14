@@ -26,7 +26,7 @@ local mainapi = {
 
 local tweenService = game:GetService('TweenService')
 local inputService = game:GetService('UserInputService')
-local textService = game:GetService('TextService'))
+local textService = game:GetService('TextService')
 local guiService = game:GetService('GuiService')
 local runService = game:GetService('RunService')
 local httpService = game:GetService('HttpService')
@@ -34,8 +34,8 @@ local httpService = game:GetService('HttpService')
 local fontsize = Instance.new('GetTextBoundsParams')
 fontsize.Width = math.huge
 local notifications
-local assetfunction = getcustomasset
 local getcustomasset
+local assetfunction = getcustomasset
 local clickgui
 local scaledgui
 local toolblur
