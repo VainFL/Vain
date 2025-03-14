@@ -33,8 +33,6 @@ local vain = loadstring(downloadFile('vain/scripts/gui.lua'), 'gui')()
 shared.vain = vain
 
 if not shared.VainIndependent  then
-
-	
 	loadstring(downloadFile('vain/scripts/universal.lua'), 'universal')()
 	if isfile('vain/scripts/bedwars.lua') then
 		loadstring(readfile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
