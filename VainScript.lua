@@ -58,4 +58,4 @@ if latest_commit and latest_commit ~= current_commit then
 end
  writefile('vain/profiles/commit.txt', latest_commit)
 
-return loadstring(downloadFile('vain/main.lua'))()
+return loadstring(downloadFile('main.lua'))()
