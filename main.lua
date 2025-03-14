@@ -42,17 +42,7 @@ if not shared.VainIndependent  then
 				return game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/scripts/bedwars.lua', true)
 			end)
 			if suc and res ~= '404: Not Found' then
-				local scriptCode = downloadFile('vain/scripts/bedwars.lua')
-if not scriptCode then
-    error("Failed to download bedwars.lua")
-end
-
-local scriptFunc, loadErr = loadstring(scriptCode, tostring(game.PlaceId))
-if not scriptFunc then
-    error("Failed to compile bedwars.lua: " .. (loadErr or "unknown error"))
-end
-
-scriptFunc(...)
+				loadstring(downloadFile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
 			end
 		end
 	end
@@ -61,4 +51,3 @@ else
 	vain.Init = finishLoading
 	return vain
 end
-
