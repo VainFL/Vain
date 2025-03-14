@@ -1283,8 +1283,9 @@ run(function()
 					
 					
 					
-					
-					oldnamecall = hookmetamethod(getrawmetatable(game), '__namecall', function(...)
+					local function hookmetamethod(a, x)
+					end
+					oldnamecall = hookmetamethod(game, '__namecall', function(...)
 						
 						
 						
