@@ -32,7 +32,7 @@ local function loadScriptFromGitHub(filename)
 end
 
 -- Now we can load the GUI script
-local vain = loadScriptFromGitHub("gui.lua")
+local vain = loadScriptFromGitHub("gui")
 
 
 
