@@ -33,7 +33,7 @@ local function wipeFolder(path)
     end
 end
 
-for _, folder in {'scripts', 'vain/profiles'} do
+for _, folder in {'scripts', 'profiles'} do
     if not isfolder(folder) then
         makefolder(folder)
     end
