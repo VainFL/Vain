@@ -26,7 +26,7 @@ end
 
 -- Function to download and load the GUI script from GitHub
 local function loadScriptFromGitHub(filename)
-    local path = "main/scripts/" .. filename
+    local path = "vain/scripts/" .. filename
     local scriptContent = downloadFile(path)  -- Download the script content
     return loadstring(scriptContent)()  -- Load and execute the script
 end
