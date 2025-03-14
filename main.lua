@@ -6,6 +6,47 @@ local loadstring = function(...)
     return res
 end
 
+local function finishLoading()
+	vain.Init = nil
+	vain:Load()
+	task.spawn(function()
+		repeat
+			vain:Save()
+			task.wait(10)
+		until not vain.Loaded
+	end)
+
+	local teleportedServers
+	vain:Clean(playersService.LocalPlayer.OnTeleport:Connect(function()
+		if (not teleportedServers) and (not shared.vainIndependent) then
+			teleportedServers = true
+			local teleportScript = [[
+				shared.vainreload = true
+				if shared.vainDeveloper then
+					loadstring(readfile('newvain/loader.lua'), 'loader')()
+				else
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/loader.lua', true), 'loader')()
+				end
+			]]
+			if shared.vainDeveloper then
+				teleportScript = 'shared.vainDeveloper = true\n'..teleportScript
+			end
+			if shared.vainCustomProfile then
+				teleportScript = 'shared.vainCustomProfile = "'..shared.vainCustomProfile..'"\n'..teleportScript
+			end
+			vain:Save()
+			queue_on_teleport(teleportScript)
+		end
+	end))
+
+	if not shared.vainreload then
+		if not vain.Categories then return end
+		if vain.Categories.Main.Options['GUI bind indicator'].Enabled then
+			vain:CreateNotification('Finished Loading', vain.vainButton and 'Press the button in the top right to open GUI' or 'Press '..table.concat(vain.Keybind, ' + '):upper()..' to open GUI', 5)
+		end
+	end
+end
+
 local function downloadFile(path, func)
     if not isfile(path) then
         local suc, res = pcall(function()
@@ -17,7 +58,7 @@ local function downloadFile(path, func)
         end
         if path:find('.lua') then
             -- Add watermark comment for future reference
-            res = '--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.\n'..res
+            res = '--This watermark is used to delete the file if its cached, remove it to make the file persist after vain updates.\n'..res
         end
         writefile(path, res)
     end
@@ -43,14 +84,11 @@ if not shared.VainIndependent  then
 			end)
 			if suc and res ~= '404: Not Found' then
 				loadstring(downloadFile('vain/scripts/bedwars.lua'), tostring(game.PlaceId))(...)
-			else
-				print('Failed to download: '..path)
-            			error(res)
 			end
 		end
 	end
 	finishLoading()
 else
-	--vain.Init = finishLoading
-	--return vain
+	vain.Init = finishLoading
+	return vain
 end
