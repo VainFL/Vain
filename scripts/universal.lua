@@ -1278,7 +1278,7 @@ run(function()
 						Hooks.Ray(args)
 						return oldray(unpack(args))
 					end)
-				else
+				--[[else
 					
 					
 					
@@ -1309,8 +1309,8 @@ run(function()
 						end
 						return oldnamecall(self, unpack(args))
 					end)
+				end--]]
 				end
-
 				repeat
 					if CircleObject then
 						CircleObject.Position = inputService:GetMouseLocation()
@@ -1349,7 +1349,7 @@ run(function()
 				until not SilentAim.Enabled
 			else
 				if oldnamecall then
-					--hookmetamethod(game, '__namecall', oldnamecall)
+					hookmetamethod(game, '__namecall', oldnamecall)
 				end
 				if oldray then
 					hookfunction(Ray.new, oldray)
