@@ -23,15 +23,13 @@ local mainapi = {
 	Windows = {}
 }
 
-local cloneref = cloneref or function(obj)
-	return obj
-end
-local tweenService = cloneref(game:GetService('TweenService'))
-local inputService = cloneref(game:GetService('UserInputService'))
-local textService = cloneref(game:GetService('TextService'))
-local guiService = cloneref(game:GetService('GuiService'))
-local runService = cloneref(game:GetService('RunService'))
-local httpService = cloneref(game:GetService('HttpService'))
+
+local tweenService = game:GetService('TweenService')
+local inputService = game:GetService('UserInputService')
+local textService = game:GetService('TextService'))
+local guiService = game:GetService('GuiService')
+local runService = game:GetService('RunService')
+local httpService = game:GetService('HttpService')
 
 local fontsize = Instance.new('GetTextBoundsParams')
 fontsize.Width = math.huge
@@ -86,7 +84,7 @@ local getcustomassets = {
 	['vain/assets/guislider.png'] = 'rbxassetid://14368320020',
 	['vain/assets/guisliderrain.png'] = 'rbxassetid://14368321228',
 	['vain/assets/guiv4.png'] = 'rbxassetid://14368322199',
-	['vain/assets/guivape.png'] = 'rbxassetid://14657521312',
+	['vain/assets/guivain.png'] = 'rbxassetid://14657521312',
 	['vain/assets/info.png'] = 'rbxassetid://14368324807',
 	['vain/assets/inventoryicon.png'] = 'rbxassetid://14928011633',
 	['vain/assets/legit.png'] = 'rbxassetid://14425650534',
@@ -116,9 +114,9 @@ local getcustomassets = {
 	['vain/assets/targetstab.png'] = 'rbxassetid://14497393895',
 	['vain/assets/textguiicon.png'] = 'rbxassetid://14368355456',
 	['vain/assets/textv4.png'] = 'rbxassetid://14368357095',
-	['vain/assets/textvape.png'] = 'rbxassetid://14368358200',
+	['vain/assets/textvain.png'] = 'rbxassetid://14368358200',
 	['vain/assets/utilityicon.png'] = 'rbxassetid://14368359107',
-	['vain/assets/vape.png'] = 'rbxassetid://14373395239',
+	['vain/assets/vain.png'] = 'rbxassetid://14373395239',
 	['vain/assets/warning.png'] = 'rbxassetid://14368361552',
 	['vain/assets/worldicon.png'] = 'rbxassetid://14368362492'
 }
@@ -319,7 +317,7 @@ local function downloadFile(path, func)
 			error(res)
 		end
 		if path:find('.lua') then
-			res = '--This watermark is used to delete the file if its cached, remove it to make the file persist after vape updates.\n'..res
+			res = '--This watermark is used to delete the file if its cached, remove it to make the file persist after vain updates.\n'..res
 		end
 		writefile(path, res)
 	end
@@ -2481,11 +2479,11 @@ function mainapi:CreateGUI()
 	addCorner(window)
 	makeDraggable(window)
 	local logo = Instance.new('ImageLabel')
-	logo.Name = 'VapeLogo'
+	logo.Name = 'vainLogo'
 	logo.Size = UDim2.fromOffset(62, 18)
 	logo.Position = UDim2.fromOffset(11, 10)
 	logo.BackgroundTransparency = 1
-	logo.Image = getcustomasset('vain/assets/guivape.png')
+	logo.Image = getcustomasset('vain/assets/guivain.png')
 	logo.ImageColor3 = select(3, uipallet.Main:ToHSV()) > 0.5 and uipallet.Text or Color3.new(1, 1, 1)
 	logo.Parent = window
 	local logov4 = Instance.new('ImageLabel')
@@ -2552,7 +2550,7 @@ function mainapi:CreateGUI()
 	settingsversion.Size = UDim2.new(1, 0, 0, 16)
 	settingsversion.Position = UDim2.new(0, 0, 1, -16)
 	settingsversion.BackgroundTransparency = 1
-	settingsversion.Text = 'Vape '..mainapi.Version..' '..(
+	settingsversion.Text = 'vain '..mainapi.Version..' '..(
 		isfile('vain/profiles/commit.txt') and readfile('vain/profiles/commit.txt'):sub(1, 6) or ''
 	)..' '
 	settingsversion.TextColor3 = color.Dark(uipallet.Text, 0.43)
@@ -2625,9 +2623,9 @@ function mainapi:CreateGUI()
 		function optionapi:SetBind(tab)
 			mainapi.Keybind = #tab <= 0 and mainapi.Keybind or table.clone(tab)
 			self.Bind = mainapi.Keybind
-			if mainapi.VapeButton then
-				mainapi.VapeButton:Destroy()
-				mainapi.VapeButton = nil
+			if mainapi.vainButton then
+				mainapi.vainButton:Destroy()
+				mainapi.vainButton = nil
 			end
 
 			bind.Visible = true
@@ -5332,7 +5330,7 @@ function mainapi:Load(skipgui, profile)
 		guidata = loadJson('vain/profiles/'..game.GameId..'.gui.txt')
 		if not guidata then
 			guidata = {Categories = {}}
-			self:CreateNotification('Vape', 'Failed to load GUI settings.', 10, 'alert')
+			self:CreateNotification('vain', 'Failed to load GUI settings.', 10, 'alert')
 			savecheck = false
 		end
 
@@ -5379,7 +5377,7 @@ function mainapi:Load(skipgui, profile)
 		local savedata = loadJson('vain/profiles/'..self.Profile..self.Place..'.txt')
 		if not savedata then
 			savedata = {Categories = {}, Modules = {}, Legit = {}}
-			self:CreateNotification('Vape', 'Failed to load '..self.Profile..' profile.', 10, 'alert')
+			self:CreateNotification('vain', 'Failed to load '..self.Profile..' profile.', 10, 'alert')
 			savecheck = false
 		end
 
@@ -5460,11 +5458,11 @@ function mainapi:Load(skipgui, profile)
 		image.Size = UDim2.fromOffset(26, 26)
 		image.Position = UDim2.fromOffset(3, 3)
 		image.BackgroundTransparency = 1
-		image.Image = getcustomasset('vain/assets/vape.png')
+		image.Image = getcustomasset('vain/assets/vain.png')
 		image.Parent = button
 		local buttoncorner = Instance.new('UICorner')
 		buttoncorner.Parent = button
-		self.VapeButton = button
+		self.vainButton = button
 		button.MouseButton1Click:Connect(function()
 			if self.ThreadFix then
 				setthreadidentity(8)
@@ -5569,7 +5567,7 @@ function mainapi:SaveOptions(object, savedoptions)
 	return savedoptions
 end
 
-function mainapi:Uninject()
+--[[function mainapi:Uninject()
 	mainapi:Save()
 	mainapi.Loaded = nil
 	for _, v in self.Modules do
@@ -5601,10 +5599,10 @@ function mainapi:Uninject()
 	mainapi.gui:Destroy()
 	table.clear(mainapi.Libraries)
 	loopClean(mainapi)
-	shared.vape = nil
-	shared.vapereload = nil
-	shared.VapeIndependent = nil
-end
+	shared.vain = nil
+	shared.vainreload = nil
+	shared.vainIndependent = nil
+end--]]
 
 gui = Instance.new('ScreenGui')
 gui.Name = randomString()
@@ -5613,9 +5611,9 @@ gui.ZIndexBehavior = Enum.ZIndexBehavior.Global
 gui.IgnoreGuiInset = true
 gui.OnTopOfCoreBlur = true
 if mainapi.ThreadFix then
-	gui.Parent = cloneref(game:GetService('CoreGui'))--(gethui and gethui()) or cloneref(game:GetService('CoreGui'))
+	gui.Parent = game:GetService('CoreGui')--(gethui and gethui()) or cloneref(game:GetService('CoreGui'))
 else
-	gui.Parent = cloneref(game:GetService('Players')).LocalPlayer.PlayerGui
+	gui.Parent = game:GetService('Players').LocalPlayer.PlayerGui
 	gui.ResetOnSpawn = false
 end
 mainapi.gui = gui
@@ -5851,41 +5849,41 @@ mainapi.MultiKeybind = general:CreateToggle({
 	Name = 'Enable Multi-Keybinding',
 	Tooltip = 'Allows multiple keys to be bound to a module (eg. G + H)'
 })
-general:CreateButton({
+--[[general:CreateButton({
 	Name = 'Reset current profile',
 	Function = function()
 		mainapi.Save = function() end
 		if isfile('vain/profiles/'..mainapi.Profile..mainapi.Place..'.txt') and delfile then
 			delfile('vain/profiles/'..mainapi.Profile..mainapi.Place..'.txt')
 		end
-		shared.vapereload = true
-		if shared.VapeDeveloper then
+		shared.vainreload = true
+		if shared.vainDeveloper then
 			loadstring(readfile('vain/loader.lua'), 'loader')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/'..readfile('vain/profiles/commit.txt')..'/loader.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/loader.lua', true))()
 		end
 	end,
-	Tooltip = 'This will set your profile to the default settings of Vape'
-})
+	Tooltip = 'This will set your profile to the default settings of vain'
+})--]]
 general:CreateButton({
 	Name = 'Self destruct',
 	Function = function()
 		mainapi:Uninject()
 	end,
-	Tooltip = 'Removes vape from the current game'
+	Tooltip = 'Removes vain from the current game'
 })
-general:CreateButton({
+--[[general:CreateButton({
 	Name = 'Reinject',
 	Function = function()
-		shared.vapereload = true
-		if shared.VapeDeveloper then
+		shared.vainreload = true
+		if shared.vainDeveloper then
 			loadstring(readfile('vain/loader.lua'), 'loader')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/'..readfile('vain/profiles/commit.txt')..'/loader.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/VainFL/Vain/'..readfile('vain/profiles/commit.txt')..'/loader.lua', true))()
 		end
 	end,
-	Tooltip = 'Reloads vape for debugging purposes'
-})
+	Tooltip = 'Reloads vain for debugging purposes'
+})--]]
 
 --[[
 	Module Settings
@@ -5979,22 +5977,22 @@ scaleslider = guipane:CreateSlider({
 	Darker = true,
 	Visible = false
 })
-guipane:CreateDropdown({
+--[[guipane:CreateDropdown({
 	Name = 'GUI Theme',
 	List = inputService.TouchEnabled and {'new', 'old'} or {'new', 'old', 'rise'},
 	Function = function(val, mouse)
 		if mouse then
 			writefile('vain/profiles/gui.txt', val)
-			shared.vapereload = true
-			if shared.VapeDeveloper then
+			shared.vainreload = true
+			if shared.vainDeveloper then
 				loadstring(readfile('vain/loader.lua'), 'loader')()
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/'..readfile('vain/profiles/commit.txt')..'/loader.lua', true))()
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/vainV4ForRoblox/'..readfile('vain/profiles/commit.txt')..'/loader.lua', true))()
 			end
 		end
 	end,
-	Tooltip = 'new - The newest vape theme to since v4.05\nold - The vape theme pre v4.05\nrise - Rise 6.0'
-})
+	Tooltip = 'new - The newest vain theme to since v4.05\nold - The vain theme pre v4.05\nrise - Rise 6.0'
+})--]]
 mainapi.RainbowMode = guipane:CreateDropdown({
 	Name = 'Rainbow Mode',
 	List = {'Normal', 'Gradient', 'Retro'},
@@ -6135,8 +6133,8 @@ textguicolor = textgui:CreateColorSlider({
 	Darker = true,
 	Visible = false
 })
-local VapeTextScale = Instance.new('UIScale')
-VapeTextScale.Parent = textgui.Children
+local vainTextScale = Instance.new('UIScale')
+vainTextScale.Parent = textgui.Children
 local textguiscale = textgui:CreateSlider({
 	Name = 'Scale',
 	Min = 0,
@@ -6144,7 +6142,7 @@ local textguiscale = textgui:CreateSlider({
 	Decimal = 10,
 	Default = 1,
 	Function = function(val)
-		VapeTextScale.Scale = val
+		vainTextScale.Scale = val
 		mainapi:UpdateTextGUI()
 	end
 })
@@ -6181,7 +6179,7 @@ local textguianimations = textgui:CreateToggle({
 })
 local textguiwatermark = textgui:CreateToggle({
 	Name = 'Watermark',
-	Tooltip = 'Renders a vape watermark',
+	Tooltip = 'Renders a vain watermark',
 	Function = function()
 		mainapi:UpdateTextGUI()
 	end
@@ -6300,17 +6298,17 @@ textguicolorcustom = textgui:CreateColorSlider({
 	Text GUI Objects
 ]]
 
-local VapeLabels = {}
-local VapeLogo = Instance.new('ImageLabel')
-VapeLogo.Name = 'Logo'
-VapeLogo.Size = UDim2.fromOffset(80, 21)
-VapeLogo.Position = UDim2.new(1, -142, 0, 3)
-VapeLogo.BackgroundTransparency = 1
-VapeLogo.BorderSizePixel = 0
-VapeLogo.Visible = false
-VapeLogo.BackgroundColor3 = Color3.new()
-VapeLogo.Image = getcustomasset('vain/assets/textvape.png')
-VapeLogo.Parent = textgui.Children
+local vainLabels = {}
+local vainLogo = Instance.new('ImageLabel')
+vainLogo.Name = 'Logo'
+vainLogo.Size = UDim2.fromOffset(80, 21)
+vainLogo.Position = UDim2.new(1, -142, 0, 3)
+vainLogo.BackgroundTransparency = 1
+vainLogo.BorderSizePixel = 0
+vainLogo.Visible = false
+vainLogo.BackgroundColor3 = Color3.new()
+vainLogo.Image = getcustomasset('vain/assets/textvain.png')
+vainLogo.Parent = textgui.Children
 
 local lastside = textgui.Children.AbsolutePosition.X > (gui.AbsoluteSize.X / 2)
 mainapi:Clean(textgui.Children:GetPropertyChangedSignal('AbsolutePosition'):Connect(function()
@@ -6324,73 +6322,73 @@ mainapi:Clean(textgui.Children:GetPropertyChangedSignal('AbsolutePosition'):Conn
 	end
 end))
 
-local VapeLogoV4 = Instance.new('ImageLabel')
-VapeLogoV4.Name = 'Logo2'
-VapeLogoV4.Size = UDim2.fromOffset(33, 18)
-VapeLogoV4.Position = UDim2.new(1, 1, 0, 1)
-VapeLogoV4.BackgroundColor3 = Color3.new()
-VapeLogoV4.BackgroundTransparency = 1
-VapeLogoV4.BorderSizePixel = 0
-VapeLogoV4.Image = getcustomasset('vain/assets/textv4.png')
-VapeLogoV4.Parent = VapeLogo
-local VapeLogoShadow = VapeLogo:Clone()
-VapeLogoShadow.Position = UDim2.fromOffset(1, 1)
-VapeLogoShadow.ZIndex = 0
-VapeLogoShadow.Visible = true
-VapeLogoShadow.ImageColor3 = Color3.new()
-VapeLogoShadow.ImageTransparency = 0.65
-VapeLogoShadow.Parent = VapeLogo
-VapeLogoShadow.Logo2.ZIndex = 0
-VapeLogoShadow.Logo2.ImageColor3 = Color3.new()
-VapeLogoShadow.Logo2.ImageTransparency = 0.65
-local VapeLogoGradient = Instance.new('UIGradient')
-VapeLogoGradient.Rotation = 90
-VapeLogoGradient.Parent = VapeLogo
-local VapeLogoGradient2 = Instance.new('UIGradient')
-VapeLogoGradient2.Rotation = 90
-VapeLogoGradient2.Parent = VapeLogoV4
-local VapeLabelCustom = Instance.new('TextLabel')
-VapeLabelCustom.Position = UDim2.fromOffset(5, 2)
-VapeLabelCustom.BackgroundTransparency = 1
-VapeLabelCustom.BorderSizePixel = 0
-VapeLabelCustom.Visible = false
-VapeLabelCustom.Text = ''
-VapeLabelCustom.TextSize = 25
-VapeLabelCustom.FontFace = textguifontcustom.Value
-VapeLabelCustom.RichText = true
-local VapeLabelCustomShadow = VapeLabelCustom:Clone()
-VapeLabelCustom:GetPropertyChangedSignal('Position'):Connect(function()
-	VapeLabelCustomShadow.Position = UDim2.new(
-		VapeLabelCustom.Position.X.Scale,
-		VapeLabelCustom.Position.X.Offset + 1,
+local vainLogoV4 = Instance.new('ImageLabel')
+vainLogoV4.Name = 'Logo2'
+vainLogoV4.Size = UDim2.fromOffset(33, 18)
+vainLogoV4.Position = UDim2.new(1, 1, 0, 1)
+vainLogoV4.BackgroundColor3 = Color3.new()
+vainLogoV4.BackgroundTransparency = 1
+vainLogoV4.BorderSizePixel = 0
+vainLogoV4.Image = getcustomasset('vain/assets/textv4.png')
+vainLogoV4.Parent = vainLogo
+local vainLogoShadow = vainLogo:Clone()
+vainLogoShadow.Position = UDim2.fromOffset(1, 1)
+vainLogoShadow.ZIndex = 0
+vainLogoShadow.Visible = true
+vainLogoShadow.ImageColor3 = Color3.new()
+vainLogoShadow.ImageTransparency = 0.65
+vainLogoShadow.Parent = vainLogo
+vainLogoShadow.Logo2.ZIndex = 0
+vainLogoShadow.Logo2.ImageColor3 = Color3.new()
+vainLogoShadow.Logo2.ImageTransparency = 0.65
+local vainLogoGradient = Instance.new('UIGradient')
+vainLogoGradient.Rotation = 90
+vainLogoGradient.Parent = vainLogo
+local vainLogoGradient2 = Instance.new('UIGradient')
+vainLogoGradient2.Rotation = 90
+vainLogoGradient2.Parent = vainLogoV4
+local vainLabelCustom = Instance.new('TextLabel')
+vainLabelCustom.Position = UDim2.fromOffset(5, 2)
+vainLabelCustom.BackgroundTransparency = 1
+vainLabelCustom.BorderSizePixel = 0
+vainLabelCustom.Visible = false
+vainLabelCustom.Text = ''
+vainLabelCustom.TextSize = 25
+vainLabelCustom.FontFace = textguifontcustom.Value
+vainLabelCustom.RichText = true
+local vainLabelCustomShadow = vainLabelCustom:Clone()
+vainLabelCustom:GetPropertyChangedSignal('Position'):Connect(function()
+	vainLabelCustomShadow.Position = UDim2.new(
+		vainLabelCustom.Position.X.Scale,
+		vainLabelCustom.Position.X.Offset + 1,
 		0,
-		VapeLabelCustom.Position.Y.Offset + 1
+		vainLabelCustom.Position.Y.Offset + 1
 	)
 end)
-VapeLabelCustom:GetPropertyChangedSignal('FontFace'):Connect(function()
-	VapeLabelCustomShadow.FontFace = VapeLabelCustom.FontFace
+vainLabelCustom:GetPropertyChangedSignal('FontFace'):Connect(function()
+	vainLabelCustomShadow.FontFace = vainLabelCustom.FontFace
 end)
-VapeLabelCustom:GetPropertyChangedSignal('Text'):Connect(function()
-	VapeLabelCustomShadow.Text = removeTags(VapeLabelCustom.Text)
+vainLabelCustom:GetPropertyChangedSignal('Text'):Connect(function()
+	vainLabelCustomShadow.Text = removeTags(vainLabelCustom.Text)
 end)
-VapeLabelCustom:GetPropertyChangedSignal('Size'):Connect(function()
-	VapeLabelCustomShadow.Size = VapeLabelCustom.Size
+vainLabelCustom:GetPropertyChangedSignal('Size'):Connect(function()
+	vainLabelCustomShadow.Size = vainLabelCustom.Size
 end)
-VapeLabelCustomShadow.TextColor3 = Color3.new()
-VapeLabelCustomShadow.TextTransparency = 0.65
-VapeLabelCustomShadow.Parent = textgui.Children
-VapeLabelCustom.Parent = textgui.Children
-local VapeLabelHolder = Instance.new('Frame')
-VapeLabelHolder.Name = 'Holder'
-VapeLabelHolder.Size = UDim2.fromScale(1, 1)
-VapeLabelHolder.Position = UDim2.fromOffset(5, 37)
-VapeLabelHolder.BackgroundTransparency = 1
-VapeLabelHolder.Parent = textgui.Children
-local VapeLabelSorter = Instance.new('UIListLayout')
-VapeLabelSorter.HorizontalAlignment = Enum.HorizontalAlignment.Right
-VapeLabelSorter.VerticalAlignment = Enum.VerticalAlignment.Top
-VapeLabelSorter.SortOrder = Enum.SortOrder.LayoutOrder
-VapeLabelSorter.Parent = VapeLabelHolder
+vainLabelCustomShadow.TextColor3 = Color3.new()
+vainLabelCustomShadow.TextTransparency = 0.65
+vainLabelCustomShadow.Parent = textgui.Children
+vainLabelCustom.Parent = textgui.Children
+local vainLabelHolder = Instance.new('Frame')
+vainLabelHolder.Name = 'Holder'
+vainLabelHolder.Size = UDim2.fromScale(1, 1)
+vainLabelHolder.Position = UDim2.fromOffset(5, 37)
+vainLabelHolder.BackgroundTransparency = 1
+vainLabelHolder.Parent = textgui.Children
+local vainLabelSorter = Instance.new('UIListLayout')
+vainLabelSorter.HorizontalAlignment = Enum.HorizontalAlignment.Right
+vainLabelSorter.VerticalAlignment = Enum.VerticalAlignment.Top
+vainLabelSorter.SortOrder = Enum.SortOrder.LayoutOrder
+vainLabelSorter.Parent = vainLabelHolder
 
 --[[
 	Target Info
@@ -6649,30 +6647,30 @@ function mainapi:UpdateTextGUI(afterload)
 	if not afterload and not mainapi.Loaded then return end
 	if textgui.Button.Enabled then
 		local right = textgui.Children.AbsolutePosition.X > (gui.AbsoluteSize.X / 2)
-		VapeLogo.Visible = textguiwatermark.Enabled
-		VapeLogo.Position = right and UDim2.new(1 / VapeTextScale.Scale, -113, 0, 6) or UDim2.fromOffset(0, 6)
-		VapeLogoShadow.Visible = textguishadow.Enabled
-		VapeLabelCustom.Text = textguibox.Value
-		VapeLabelCustom.FontFace = textguifontcustom.Value
-		VapeLabelCustom.Visible = VapeLabelCustom.Text ~= '' and textguitext.Enabled
-		VapeLabelCustomShadow.Visible = VapeLabelCustom.Visible and textguishadow.Enabled
-		VapeLabelSorter.HorizontalAlignment = right and Enum.HorizontalAlignment.Right or Enum.HorizontalAlignment.Left
-		VapeLabelHolder.Size = UDim2.fromScale(1 / VapeTextScale.Scale, 1)
-		VapeLabelHolder.Position = UDim2.fromOffset(right and 3 or 0, 11 + (VapeLogo.Visible and VapeLogo.Size.Y.Offset or 0) + (VapeLabelCustom.Visible and 28 or 0) + (textguibackground.Enabled and 3 or 0))
-		if VapeLabelCustom.Visible then
-			local size = getfontsize(removeTags(VapeLabelCustom.Text), VapeLabelCustom.TextSize, VapeLabelCustom.FontFace)
-			VapeLabelCustom.Size = UDim2.fromOffset(size.X, size.Y)
-			VapeLabelCustom.Position = UDim2.new(right and 1 / VapeTextScale.Scale or 0, right and -size.X or 0, 0, (VapeLogo.Visible and 32 or 8))
+		vainLogo.Visible = textguiwatermark.Enabled
+		vainLogo.Position = right and UDim2.new(1 / vainTextScale.Scale, -113, 0, 6) or UDim2.fromOffset(0, 6)
+		vainLogoShadow.Visible = textguishadow.Enabled
+		vainLabelCustom.Text = textguibox.Value
+		vainLabelCustom.FontFace = textguifontcustom.Value
+		vainLabelCustom.Visible = vainLabelCustom.Text ~= '' and textguitext.Enabled
+		vainLabelCustomShadow.Visible = vainLabelCustom.Visible and textguishadow.Enabled
+		vainLabelSorter.HorizontalAlignment = right and Enum.HorizontalAlignment.Right or Enum.HorizontalAlignment.Left
+		vainLabelHolder.Size = UDim2.fromScale(1 / vainTextScale.Scale, 1)
+		vainLabelHolder.Position = UDim2.fromOffset(right and 3 or 0, 11 + (vainLogo.Visible and vainLogo.Size.Y.Offset or 0) + (vainLabelCustom.Visible and 28 or 0) + (textguibackground.Enabled and 3 or 0))
+		if vainLabelCustom.Visible then
+			local size = getfontsize(removeTags(vainLabelCustom.Text), vainLabelCustom.TextSize, vainLabelCustom.FontFace)
+			vainLabelCustom.Size = UDim2.fromOffset(size.X, size.Y)
+			vainLabelCustom.Position = UDim2.new(right and 1 / vainTextScale.Scale or 0, right and -size.X or 0, 0, (vainLogo.Visible and 32 or 8))
 		end
 
 		local found = {}
-		for _, v in VapeLabels do
+		for _, v in vainLabels do
 			if v.Enabled then
 				table.insert(found, v.Object.Name)
 			end
 			v.Object:Destroy()
 		end
-		table.clear(VapeLabels)
+		table.clear(vainLabels)
 
 		local info = TweenInfo.new(0.3, Enum.EasingStyle.Exponential)
 		for i, v in mainapi.Modules do
@@ -6684,7 +6682,7 @@ function mainapi:UpdateTextGUI(afterload)
 				holder.Size = UDim2.fromOffset()
 				holder.BackgroundTransparency = 1
 				holder.ClipsDescendants = true
-				holder.Parent = VapeLabelHolder
+				holder.Parent = vainLabelHolder
 				local holderbackground
 				local holdercolorline
 				if textguibackground.Enabled then
@@ -6746,7 +6744,7 @@ function mainapi:UpdateTextGUI(afterload)
 				else
 					holder.Size = v.Enabled and holdersize or UDim2.fromOffset()
 				end
-				table.insert(VapeLabels, {
+				table.insert(vainLabels, {
 					Object = holder,
 					Text = holdertext,
 					Background = holderbackground,
@@ -6757,16 +6755,16 @@ function mainapi:UpdateTextGUI(afterload)
 		end
 
 		if textguisort.Value == 'Alphabetical' then
-			table.sort(VapeLabels, function(a, b)
+			table.sort(vainLabels, function(a, b)
 				return a.Text.Text < b.Text.Text
 			end)
 		else
-			table.sort(VapeLabels, function(a, b)
+			table.sort(vainLabels, function(a, b)
 				return a.Text.Size.X.Offset > b.Text.Size.X.Offset
 			end)
 		end
 
-		for i, v in VapeLabels do
+		for i, v in vainLabels do
 			if v.Color then
 				v.Color.Parent.Line.Visible = i ~= 1
 			end
@@ -6781,19 +6779,19 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 	if mainapi.Loaded == nil then return end
 	if not default and mainapi.GUIColor.Rainbow then return end
 	if textgui.Button.Enabled then
-		VapeLogoGradient.Color = ColorSequence.new({
+		vainLogoGradient.Color = ColorSequence.new({
 			ColorSequenceKeypoint.new(0, Color3.fromHSV(hue, sat, val)),
 			ColorSequenceKeypoint.new(1, textguigradient.Enabled and Color3.fromHSV(mainapi:Color((hue - 0.075) % 1)) or Color3.fromHSV(hue, sat, val))
 		})
-		VapeLogoGradient2.Color = textguigradient.Enabled and textguigradientv4.Enabled and VapeLogoGradient.Color or ColorSequence.new({
+		vainLogoGradient2.Color = textguigradient.Enabled and textguigradientv4.Enabled and vainLogoGradient.Color or ColorSequence.new({
 			ColorSequenceKeypoint.new(0, Color3.new(1, 1, 1)),
 			ColorSequenceKeypoint.new(1, Color3.new(1, 1, 1))
 		})
-		VapeLabelCustom.TextColor3 = textguicolorcustomtoggle.Enabled and Color3.fromHSV(textguicolorcustom.Hue, textguicolorcustom.Sat, textguicolorcustom.Value) or VapeLogoGradient.Color.Keypoints[2].Value
+		vainLabelCustom.TextColor3 = textguicolorcustomtoggle.Enabled and Color3.fromHSV(textguicolorcustom.Hue, textguicolorcustom.Sat, textguicolorcustom.Value) or vainLogoGradient.Color.Keypoints[2].Value
 
 		local customcolor = textguicolordrop.Value == 'Custom color' and Color3.fromHSV(textguicolor.Hue, textguicolor.Sat, textguicolor.Value) or nil
-		for i, v in VapeLabels do
-			v.Text.TextColor3 = customcolor or (mainapi.GUIColor.Rainbow and Color3.fromHSV(mainapi:Color((hue - ((textguigradient and i + 2 or i) * 0.025)) % 1)) or VapeLogoGradient.Color.Keypoints[2].Value)
+		for i, v in vainLabels do
+			v.Text.TextColor3 = customcolor or (mainapi.GUIColor.Rainbow and Color3.fromHSV(mainapi:Color((hue - ((textguigradient and i + 2 or i) * 0.025)) % 1)) or vainLogoGradient.Color.Keypoints[2].Value)
 			if v.Color then
 				v.Color.BackgroundColor3 = v.Text.TextColor3
 			end
@@ -6808,7 +6806,7 @@ function mainapi:UpdateGUI(hue, sat, val, default)
 
 	for i, v in mainapi.Categories do
 		if i == 'Main' then
-			v.Object.VapeLogo.V4Logo.ImageColor3 = Color3.fromHSV(hue, sat, val)
+			v.Object.vainLogo.V4Logo.ImageColor3 = Color3.fromHSV(hue, sat, val)
 			for _, button in v.Buttons do
 				if button.Enabled then
 					button.Object.TextColor3 = rainbow and Color3.fromHSV(mainapi:Color((hue - (button.Index * 0.025)) % 1)) or Color3.fromHSV(hue, sat, val)
