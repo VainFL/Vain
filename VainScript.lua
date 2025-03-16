@@ -34,7 +34,7 @@ local function wipeFolder(path)
     end
 end
 
-for _, folder in {'vain', 'vain/scripts', 'vain/profiles', 'vain/assets', 'vain/libraries'} do
+for _, folder in {'vain', 'vain/scripts', 'vain/profiles', 'vain/assets',} do
     if not isfolder(folder) then
         makefolder(folder)
     end
@@ -55,7 +55,6 @@ if latest_commit and latest_commit ~= current_commit then
     wipeFolder('vain/profiles')
     wipeFolder('vain/assets')
     wipeFolder('vain/scripts')
-    wipeFolder('vain/libraries')
 end
  writefile('vain/profiles/commit.txt', latest_commit)
 
