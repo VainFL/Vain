@@ -2101,6 +2101,7 @@ end)
 
 -- Get bees
 CollectionService:GetInstanceAddedSignal("bee"):Connect(function(bee)
+	if bee.Name == "TamedBee" then return end
 	task.wait(.2)
 	createBeam(bee, "bee", Settings.BEE_ESP.COLOR, Settings.BEE_ESP.ENABLED)
 	addHighlight(bee, 'bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.HIGHLIGHT))
@@ -2110,6 +2111,7 @@ end)
 -- Get bees
 local function GetBees()
 	for _, bee in ipairs(CollectionService:GetTagged("bee")) do
+		if bee.Name == "TamedBee" then return end
 		task.wait(.1)
 		createBeam(bee, "bee", Settings.BEE_ESP.COLOR, Settings.BEE_ESP.ENABLED)
 		addHighlight(bee, 'bee', (Settings.BEE_ESP.ENABLED and Settings.BEE_ESP.HIGHLIGHT))
