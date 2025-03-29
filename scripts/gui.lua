@@ -1755,7 +1755,7 @@ local RunService = game:GetService("RunService")
 local TweenService = game:GetService("TweenService")
 
 local camera = workspace.CurrentCamera
-local smoothFactor = 0.001
+local smoothFactor = 1
 
 -- AimAssist: Aim at Target
 RunService.Heartbeat:Connect(function()
