@@ -2304,7 +2304,15 @@ UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 	end
 	if input.KeyCode == Enum.KeyCode.R then
 		toggleMetalESP()
-	end
+		if Settings.METAL_ESP.ENABLED == true then
+			TweenUI(MetalESPToggleButton, .05, Color3.fromRGB(0, 255, 0))
+		else
+			TweenUI(MetalESPToggleButton, .05, Color3.fromRGB(20, 20, 20))
+		end
+		toggleBeamType("metal-loot", Settings.METAL_ESP.ENABLED)
+		toggleHighlights('metal-loot', (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.HIGHLIGHT))
+		toggleDistanceTracker('metal-loot', (Settings.METAL_ESP.ENABLED and Settings.METAL_ESP.SHOW_DISTANCE))
+		end
 end)
 
 
