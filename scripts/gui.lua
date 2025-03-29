@@ -19,7 +19,7 @@ Settings = {
 	},
 
 	keybinds = {
-
+		
 	},
 
 	BEE_ESP = {
@@ -2299,8 +2299,11 @@ UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
 			blur.Enabled = false
 		end
 	end
-	if input.KeyCode == Enum.KeyCode.Q  then
+	if input.KeyCode == Enum.KeyCode.Q then
 		toggleAimAssist()
+	end
+	if input.KeyCode == Enum.KeyCode.R then
+		toggleMetalESP()
 	end
 end)
 
